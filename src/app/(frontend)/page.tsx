@@ -1,59 +1,51 @@
-import { headers as getHeaders } from 'next/headers.js'
-import Image from 'next/image'
 import { getPayload } from 'payload'
 import React from 'react'
-import { fileURLToPath } from 'url'
-
+import HeroBlock from '@/components/homepage/HeroBlock'
+import AboutUsSection from '@/components/homepage/LandingAbout'
+import ServicesCarouselSection from '@/components/homepage/Services'
 import config from '@/payload.config'
 import './styles.css'
 
 export default async function HomePage() {
-  const headers = await getHeaders()
   const payloadConfig = await config
   const payload = await getPayload({ config: payloadConfig })
-  const { user } = await payload.auth({ headers })
+  const {
+    docs: [page],
+  } = await payload.find({
+    collection: 'pages',
+    where: {
+      slug: { equals: 'home-page' },
+    },
+  })
 
-  const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
+  if (!page) {
+    return <div>Page not found</div>
+  }
 
+  // Render the page layout dynamically
   return (
-    <div className="home">
-      <div className="content">
-        <picture>
-          <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg" />
-          <Image
-            alt="Payload Logo"
-            height={65}
-            src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg"
-            width={65}
-          />
-        </picture>
-        {!user && <h1>Welcome to your new project.</h1>}
-        {user && <h1>Welcome back, {user.email}</h1>}
-        <div className="links">
-          <a
-            className="admin"
-            href={payloadConfig.routes.admin}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Go to admin panel
-          </a>
-          <a
-            className="docs"
-            href="https://payloadcms.com/docs"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Documentation
-          </a>
-        </div>
-      </div>
-      <div className="footer">
-        <p>Update this page by editing</p>
-        <a className="codeLink" href={fileURL}>
-          <code>app/(frontend)/page.tsx</code>
-        </a>
-      </div>
+    <div>
+      <div className="page">{page.layout?.map((block, index) => renderBlock(block, index))}</div>
     </div>
   )
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function renderBlock(block: any, index: number) {
+  switch (block.blockType) {
+    case 'hero':
+      return <HeroBlock key={index} block={block} />
+    case 'home-about':
+      return <AboutUsSection key={index} block={block} />
+    // case 'our-team':
+    //   return <TeamSection key={index} block={block} />
+    case 'services-block':
+      return <ServicesCarouselSection key={index} block={block} />
+    // case 'why-choose-us':
+    //   return <WhyBlock key={index} block={block} />
+    // case 'cta-section':
+    //   return <CTABlock key={index} block={block} />
+    default:
+      return null
+  }
 }
