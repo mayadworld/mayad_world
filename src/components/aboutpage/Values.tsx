@@ -11,20 +11,18 @@ interface ValuesBlockProps {
 }
 
 export default function ValuesSection({ block }: ValuesBlockProps) {
-  const mainColor = '#003566'
-
   // Use provided values or defaults
   const values = block.our_values
 
   return (
-    <section className="py-16" style={{ backgroundColor: mainColor }}>
+    <section className="py-16 bg-blue-900">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-3 text-white">Our Core Values</h2>
           <p className="text-white/80 max-w-2xl mx-auto">
             The principles that guide our practice and define our commitment to clients
           </p>
-          <div className="w-20 h-1 mx-auto mt-4 bg-white/30"></div>
+          <div className="w-20 h-1 mx-auto mt-4 bg-[#eab308]"></div>
         </div>
 
         <div className="grid md:grid-cols-4 gap-6">
@@ -35,9 +33,7 @@ export default function ValuesSection({ block }: ValuesBlockProps) {
             >
               <div className="h-2 w-full" style={{ backgroundColor: getAccentColor(index) }}></div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3" style={{ color: mainColor }}>
-                  {value.title}
-                </h3>
+                <h3 className="text-xl font-bold mb-3 text-blue-900">{value.title}</h3>
                 <p className="text-gray-600 text-base">{value.description}</p>
               </div>
             </div>

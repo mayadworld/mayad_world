@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Target, Eye } from 'lucide-react'
+import { Target, Eye, ArrowRight, Globe, Users } from 'lucide-react'
 
 interface GoalsBlockProps {
   block: {
@@ -10,111 +10,60 @@ interface GoalsBlockProps {
 }
 
 export default function GoalsSection({ block }: GoalsBlockProps) {
-  const mainColor = '#003566'
-  const lightMainColor = '#e5edf5'
-
   // Default values in case none are provided
   const mission = block.mission
-
   const vision = block.vision
 
   return (
-    <section className="py-16" style={{ backgroundColor: '#f8fafc' }}>
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-3" style={{ color: mainColor }}>
-            Our Purpose
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Guiding principles that shape our approach to legal practice and client service
-          </p>
-          <div className="w-20 h-1 mx-auto mt-4" style={{ backgroundColor: mainColor }}></div>
+    <section className="py-20 bg-neutral-50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Section Header */}
+        <div className="mb-16 max-w-xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-neutral-800">Our Purpose</h2>
+          <div className="h-1 w-12 bg-blue-900 mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Mission Card */}
-          <div
-            className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 transition-transform hover:translate-y-[-5px]"
-            style={{ borderColor: mainColor }}
-          >
-            <div className="p-6">
-              <div className="flex items-center mb-4">
-                <div className="p-3 rounded-full mr-4" style={{ backgroundColor: lightMainColor }}>
-                  <Target size={28} style={{ color: mainColor }} />
-                </div>
-                <h3 className="text-2xl font-bold" style={{ color: mainColor }}>
-                  Our Mission
-                </h3>
-              </div>
-
-              <p className="text-gray-700 leading-relaxed mb-6">{mission}</p>
-
-              <div className="flex flex-wrap gap-3 mt-6">
-                <span
-                  className="inline-block px-3 py-1 text-sm rounded-full text-white"
-                  style={{ backgroundColor: mainColor }}
-                >
-                  Client-Focused
-                </span>
-                <span className="inline-block px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700">
-                  Ethical Practice
-                </span>
-                <span className="inline-block px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700">
-                  Excellence
-                </span>
-              </div>
+        {/* Content Container */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
+          {/* Mission */}
+          <div className="group">
+            <div className="mb-6 flex items-center">
+              <span className="flex items-center justify-center w-10 h-10 rounded-full mr-3 bg-blue-50 text-cyan-600 transition-all group-hover:scale-110">
+                <Target size={20} />
+              </span>
+              <h3 className="text-2xl font-medium text-neutral-800">Our Mission</h3>
             </div>
+
+            <p className="text-neutral-600 leading-relaxed">{mission}</p>
           </div>
 
-          {/* Vision Card */}
-          <div
-            className="bg-white rounded-lg shadow-md overflow-hidden border-t-4 transition-transform hover:translate-y-[-5px]"
-            style={{ borderColor: mainColor }}
-          >
-            <div className="p-6">
-              <div className="flex items-center mb-4">
-                <div className="p-3 rounded-full mr-4" style={{ backgroundColor: lightMainColor }}>
-                  <Eye size={28} style={{ color: mainColor }} />
-                </div>
-                <h3 className="text-2xl font-bold" style={{ color: mainColor }}>
-                  Our Vision
-                </h3>
-              </div>
-
-              <p className="text-gray-700 leading-relaxed mb-6">{vision}</p>
-
-              <div className="flex flex-wrap gap-3 mt-6">
-                <span
-                  className="inline-block px-3 py-1 text-sm rounded-full text-white"
-                  style={{ backgroundColor: mainColor }}
-                >
-                  Leadership
-                </span>
-                <span className="inline-block px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700">
-                  Innovation
-                </span>
-                <span className="inline-block px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700">
-                  Trust
-                </span>
-              </div>
+          {/* Vision */}
+          <div className="group">
+            <div className="mb-6 flex items-center">
+              <span className="flex items-center justify-center w-10 h-10 rounded-full mr-3 bg-green-50 text-green-600 transition-all group-hover:scale-110">
+                <Eye size={20} />
+              </span>
+              <h3 className="text-2xl font-medium text-neutral-800">Our Vision</h3>
             </div>
+
+            <p className="text-neutral-600 leading-relaxed">{vision}</p>
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-12 text-center">
-          <div className="p-8 rounded-lg" style={{ backgroundColor: lightMainColor }}>
-            <h3 className="text-xl font-semibold mb-3" style={{ color: mainColor }}>
-              Want to learn more about our approach?
-            </h3>
-            <p className="text-gray-600 mb-6">
-              Schedule a consultation with one of our experienced attorneys today.
-            </p>
-            <button
-              className="px-6 py-3 rounded-lg text-white font-medium transition-all hover:opacity-90 shadow-md"
-              style={{ backgroundColor: mainColor }}
-            >
-              Contact Our Team
+        {/* Bottom CTA - Minimalist Style */}
+        <div className="mt-16 bg-gradient-to-r from-blue-900 to-yellow-500/50 rounded-lg overflow-hidden shadow-md">
+          <div className="p-8 md:p-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-6 md:mb-0">
+              <h3 className="text-xl font-medium text-white mb-2">
+                Ready to participate in our Model UN program?
+              </h3>
+              <p className="text-blue-100">
+                Join delegates from around the world in simulating international diplomacy.
+              </p>
+            </div>
+            <button className="inline-flex items-center bg-white text-blue-600 hover:bg-blue-50 transition-colors font-medium px-6 py-3 rounded-lg shadow-sm">
+              Register Now
+              <ArrowRight size={16} className="ml-2" />
             </button>
           </div>
         </div>

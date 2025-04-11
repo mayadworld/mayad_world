@@ -1,10 +1,8 @@
 import { getPayload } from 'payload'
 import React from 'react'
 import AboutHero from '@/components/aboutpage/AboutHero'
-// import AboutSection from '@/components/aboutPage/AboutSection'
-// import GoalsSection from '@/components/aboutPage/GoalsSection'
-// import TeamSection from '@/components/aboutPage/TeamSection'
-
+import GoalsSection from '@/components/aboutpage/Goals'
+import ValuesSection from '@/components/aboutpage/Values'
 import config from '@/payload.config'
 
 export default async function AboutPage() {
@@ -34,8 +32,8 @@ function renderBlock(block: any, index: number) {
       return <AboutHero key={index} block={block} />
     case 'goals':
       return <GoalsSection key={index} block={block} />
-    case 'ourTeam':
-      return <TeamSection key={index} block={block} />
+    case 'core-values':
+      return <ValuesSection key={index} block={block} />
     default:
       return null
   }
