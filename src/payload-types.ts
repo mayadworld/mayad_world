@@ -69,8 +69,10 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
+    newsletter: Newsletter;
     pages: Page;
     services: Service;
+    event: Event;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -79,8 +81,10 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
+    newsletter: NewsletterSelect<false> | NewsletterSelect<true>;
     pages: PagesSelect<false> | PagesSelect<true>;
     services: ServicesSelect<false> | ServicesSelect<true>;
+    event: EventSelect<false> | EventSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -155,6 +159,16 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "newsletter".
+ */
+export interface Newsletter {
+  id: number;
+  email: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
  */
 export interface Page {
@@ -198,13 +212,6 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'why-choose-us';
-          }
-        | {
-            title: string;
-            description: string;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'cta-section';
           }
         | {
             clause: string;
@@ -251,6 +258,24 @@ export interface Service {
   createdAt: string;
 }
 /**
+ * Add Event
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "event".
+ */
+export interface Event {
+  id: number;
+  title: string;
+  slug: string;
+  description: string;
+  location: string;
+  thumbnail: number | Media;
+  date: string;
+  purchaseLink: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
@@ -266,12 +291,20 @@ export interface PayloadLockedDocument {
         value: number | Media;
       } | null)
     | ({
+        relationTo: 'newsletter';
+        value: number | Newsletter;
+      } | null)
+    | ({
         relationTo: 'pages';
         value: number | Page;
       } | null)
     | ({
         relationTo: 'services';
         value: number | Service;
+      } | null)
+    | ({
+        relationTo: 'event';
+        value: number | Event;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -350,6 +383,15 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "newsletter_select".
+ */
+export interface NewsletterSelect<T extends boolean = true> {
+  email?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
@@ -398,14 +440,6 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
-        'cta-section'?:
-          | T
-          | {
-              title?: T;
-              description?: T;
-              id?: T;
-              blockName?: T;
-            };
         about?:
           | T
           | {
@@ -446,6 +480,21 @@ export interface PagesSelect<T extends boolean = true> {
 export interface ServicesSelect<T extends boolean = true> {
   title?: T;
   description?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "event_select".
+ */
+export interface EventSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  description?: T;
+  location?: T;
+  thumbnail?: T;
+  date?: T;
+  purchaseLink?: T;
   updatedAt?: T;
   createdAt?: T;
 }

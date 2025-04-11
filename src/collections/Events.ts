@@ -1,11 +1,12 @@
 import { CollectionConfig } from 'payload'
-import { text } from 'stream/consumers'
+import slugify from 'slugify'
 
 export const Events: CollectionConfig = {
   slug: 'event',
   admin: {
     useAsTitle: 'title',
     description: 'Add Event',
+    group: 'Events Collection',
   },
   fields: [
     {
@@ -15,11 +16,37 @@ export const Events: CollectionConfig = {
       required: true,
     },
     {
+      name: 'slug',
+      label: 'Slug',
+      type: 'text',
+      required: true,
+      unique: true,
+      admin: {
+        position: 'sidebar',
+      },
+      hooks: {
+        beforeValidate: [
+          ({ value, data }) => {
+            if (value) return slugify(value, { lower: true, strict: true })
+            if (data?.title) return slugify(data.title, { lower: true, strict: true })
+            return value
+          },
+        ],
+      },
+    },
+    {
       name: 'description',
       label: 'Description',
       type: 'textarea',
       required: true,
     },
+    {
+      name: 'location',
+      label: 'Location',
+      type: 'text',
+      required: true,
+    },
+
     {
       name: 'thumbnail',
       label: 'Thumbnail Photo',
@@ -30,7 +57,7 @@ export const Events: CollectionConfig = {
     {
       name: 'date',
       label: 'Event Date',
-      type: 'date',
+      type: 'text',
       required: true,
     },
     {
