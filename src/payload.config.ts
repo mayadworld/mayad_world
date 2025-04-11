@@ -28,6 +28,7 @@ export default buildConfig({
   },
   collections: [Users, Media, Newsletter, Pages, Services, Events],
   editor: lexicalEditor(),
+  // serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL,
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -39,18 +40,18 @@ export default buildConfig({
     },
   }),
   sharp,
-  email: nodemailerAdapter({
-    defaultFromAddress: `${process.env.EMAIL_USER}`,
-    defaultFromName: 'LilanKichwenKadima',
-    transport: await nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
-    }),
-  }),
+  // email: nodemailerAdapter({
+  //   defaultFromAddress: `${process.env.EMAIL_USER}`,
+  //   defaultFromName: 'LilanKichwenKadima',
+  //   transport: await nodemailer.createTransport({
+  //     host: process.env.SMTP_HOST,
+  //     port: Number(process.env.SMTP_PORT),
+  //     auth: {
+  //       user: process.env.SMTP_USER,
+  //       pass: process.env.SMTP_PASS,
+  //     },
+  //   }),
+  // }),
   plugins: [
     s3Storage({
       collections: {
