@@ -122,7 +122,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto mt-16 pt-8 border-t border-white/10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-white/50 text-xs">
-            &copy; {new Date().getFullYear()} LilanKichwenKadima Advocates LLP. All rights reserved.
+            &copy; {new Date().getFullYear()} Mayad World. All rights reserved.
           </p>
 
           <div className="flex gap-8">
