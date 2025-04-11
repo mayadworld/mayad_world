@@ -73,7 +73,7 @@ export default function Newsletter() {
                   />
                   <button
                     type="submit"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#eab308] text-[#13589e] p-2.5 rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#eab308] text-blue-900 p-2.5 rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white"
                     aria-label="Subscribe"
                   >
                     <Send className="h-5 w-5" />

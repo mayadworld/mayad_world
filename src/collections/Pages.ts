@@ -4,6 +4,7 @@ import { ServicesBlock } from '@/blocks/homepage/services/schema'
 import { WhyChooseUs } from '@/blocks/homepage/why-us/schema'
 import type { CollectionConfig } from 'payload'
 import { About, Goals, Values } from '@/blocks/about/schema'
+import { Contact, ContactAddresses } from '@/blocks/contactPage/schema'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -27,7 +28,17 @@ export const Pages: CollectionConfig = {
       name: 'layout',
       label: 'Layout',
       type: 'blocks',
-      blocks: [Hero, LandingAbout, ServicesBlock, WhyChooseUs, About, Goals, Values],
+      blocks: [
+        Hero,
+        LandingAbout,
+        ServicesBlock,
+        WhyChooseUs,
+        About,
+        Goals,
+        Values,
+        Contact,
+        ContactAddresses,
+      ],
     },
   ],
 }
