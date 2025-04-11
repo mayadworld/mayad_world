@@ -1,8 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { Mail, Phone, ArrowRight, ChevronUp, Send, AlertCircle } from 'lucide-react'
-import Link from 'next/link'
-import Image from 'next/image'
+import { Send, AlertCircle } from 'lucide-react'
 
 export default function Newsletter() {
   const [email, setEmail] = useState('')

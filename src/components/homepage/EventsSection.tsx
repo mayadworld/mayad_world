@@ -2,7 +2,7 @@ import React from 'react'
 import { fetchAllEvents } from '@/lib/eventsUtil'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Calendar, MapPin, ChevronRight, Clock, ExternalLink } from 'lucide-react'
+import { Calendar, MapPin, ChevronRight, ExternalLink } from 'lucide-react'
 
 export default async function EventsSection() {
   const data = await fetchAllEvents()
@@ -87,13 +87,6 @@ export default async function EventsSection() {
                         <ExternalLink size={16} className="ml-2" />
                       </a>
                     )}
-                    <Link
-                      href={`/events/${events[0].slug}`}
-                      className="flex items-center justify-center px-6 py-3 bg-white border border-blue-900 text-blue-900 hover:bg-blue-50 font-medium rounded-lg transition"
-                    >
-                      Learn More
-                      <ChevronRight size={16} className="ml-2" />
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -142,14 +135,7 @@ export default async function EventsSection() {
                     </div>
 
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
-                      <Link
-                        href={`/events/${event.slug}`}
-                        className="text-blue-900 font-medium hover:text-amber-500 flex items-center text-sm transition-colors"
-                      >
-                        Event Details
-                        <ChevronRight size={16} className="ml-1" />
-                      </Link>
-
+                      <div></div>
                       {event.purchaseLink && (
                         <a
                           href={event.purchaseLink}

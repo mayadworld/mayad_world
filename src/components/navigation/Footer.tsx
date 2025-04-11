@@ -39,8 +39,8 @@ export default function Footer() {
           </div>
 
           <p className="text-white/80 text-sm leading-relaxed">
-            With decades of combined experience, our attorneys provide strategic counsel and
-            aggressive advocacy tailored to your unique legal challenges.
+            Whether you{"'"}re a school, student, or educator, we{"'"}re here to support your MUN
+            goals. Join our network of changemakers today.
           </p>
 
           <div className="flex gap-4">
@@ -101,7 +101,7 @@ export default function Footer() {
                 href="mailto:info@lkkadvocates.com"
                 className="text-white/70 hover:text-white text-sm transition-colors"
               >
-                info@lkkadvocates.com
+                info@mayadworld.com
               </a>
             </div>
 
@@ -111,7 +111,7 @@ export default function Footer() {
                 href="tel:+254715337850"
                 className="text-white/70 hover:text-white text-sm transition-colors"
               >
-                +254 715 337850
+                +254 724 090909
               </a>
             </div>
           </div>

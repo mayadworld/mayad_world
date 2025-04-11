@@ -2,6 +2,9 @@ import { Block } from 'payload'
 
 export const About: Block = {
   slug: 'about',
+  admin: {
+    group: 'About Page',
+  },
   fields: [
     { name: 'clause', type: 'textarea', required: true },
     { name: 'photo', label: 'Firm Photo', type: 'upload', relationTo: 'media', required: true },
@@ -10,6 +13,9 @@ export const About: Block = {
 
 export const Goals: Block = {
   slug: 'goals',
+  admin: {
+    group: 'About Page',
+  },
   fields: [
     { name: 'mission', type: 'textarea', required: true },
     { name: 'vision', type: 'textarea', required: true },
@@ -18,6 +24,9 @@ export const Goals: Block = {
 
 export const Values: Block = {
   slug: 'core-values',
+  admin: {
+    group: 'About Page',
+  },
   fields: [
     {
       name: 'our_values',

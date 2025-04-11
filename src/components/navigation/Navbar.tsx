@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
       <div
-        className={`${scrolled ? 'bg-[#ffffff] border-b-4 border-[#003566]' : 'bg-transparent'} transition-all duration-300`}
+        className={`${scrolled ? 'bg-[#ffffff] border-b-4 border-[#003566]' : 'bg-transparent border-b-2 border-[#eab308]'} transition-all duration-300`}
       >
         <div className="max-w-screen-xl px-4 lg:px-8 mx-auto">
           <div className="flex justify-between items-center h-20">
