@@ -34,7 +34,7 @@ export default function AboutHero({ block }: AboutHeroBlockProps) {
               <div className="bg- mr-2 rounded-full p-1">
                 <Building2 size={16} className="text-[#eab308]" />
               </div>
-              <span className="text-white font-medium">Mayad World</span>
+              <span className="text-white font-medium">Mayad World Connections</span>
             </div>
 
             {/* Heading */}
@@ -60,7 +60,7 @@ export default function AboutHero({ block }: AboutHeroBlockProps) {
                 width={900}
                 height={1200}
                 priority
-                alt="Mayad World Global Network"
+                alt="Mayad World Connections Global Network"
                 className="w-full h-[50vh] lg:h-[80vh] object-cover"
               />
 
@@ -71,7 +71,9 @@ export default function AboutHero({ block }: AboutHeroBlockProps) {
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-blue-950/90 to-transparent">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-white text-xl md:text-2xl font-bold">Mayad World</h3>
+                    <h3 className="text-white text-xl md:text-2xl font-bold">
+                      Mayad World Connections
+                    </h3>
                     <p className="text-blue-100/80">Global Connections, Local Expertise</p>
                   </div>
                   <div className="bg-primary/20 backdrop-blur-sm p-2 rounded-lg border border-primary/30">

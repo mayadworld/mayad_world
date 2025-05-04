@@ -99,7 +99,7 @@ export default function HeroBlock({ block }: HeroBlockProps) {
   return (
     <section
       ref={ref}
-      className="relative min-h-[80vh] md:min-h-[85vh] lg:min-h-screen overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20"
+      className="relative min-h-[80vh] md:min-h-[120vh] xl:min-h-[90vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 flex items-center justify-center"
     >
       {/* Mobile background image (visible only on small screens) */}
       <div className="absolute inset-0 md:hidden">

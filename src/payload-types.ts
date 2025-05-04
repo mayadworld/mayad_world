@@ -73,6 +73,7 @@ export interface Config {
     pages: Page;
     services: Service;
     event: Event;
+    program: Program;
     forms: Form;
     'form-submissions': FormSubmission;
     'payload-locked-documents': PayloadLockedDocument;
@@ -87,6 +88,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     services: ServicesSelect<false> | ServicesSelect<true>;
     event: EventSelect<false> | EventSelect<true>;
+    program: ProgramSelect<false> | ProgramSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -307,10 +309,25 @@ export interface Event {
   title: string;
   slug: string;
   description: string;
+  category: number | Program;
   location: string;
   thumbnail: number | Media;
   date: string;
   purchaseLink: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Add Program
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "program".
+ */
+export interface Program {
+  id: number;
+  title: string;
+  slug: string;
+  description: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -542,6 +559,10 @@ export interface PayloadLockedDocument {
         value: number | Event;
       } | null)
     | ({
+        relationTo: 'program';
+        value: number | Program;
+      } | null)
+    | ({
         relationTo: 'forms';
         value: number | Form;
       } | null)
@@ -771,10 +792,22 @@ export interface EventSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   description?: T;
+  category?: T;
   location?: T;
   thumbnail?: T;
   date?: T;
   purchaseLink?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "program_select".
+ */
+export interface ProgramSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  description?: T;
   updatedAt?: T;
   createdAt?: T;
 }

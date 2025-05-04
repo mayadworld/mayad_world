@@ -44,7 +44,7 @@ export default function WhyBlock({ block }: WhyBlockProps) {
               <div className="text-center mb-10">
                 <div className="inline-flex items-center justify-center mb-4">
                   <span className="px-3 py-1 bg-blue-900 text-white text-xs font-medium rounded-full">
-                    MAYAD WORLD
+                    Mayad World Connections
                   </span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">

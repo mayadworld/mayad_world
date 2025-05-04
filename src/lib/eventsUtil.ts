@@ -15,6 +15,7 @@ export async function fetchAllEvents() {
     slug: events.slug,
     title: events.title,
     description: events.description,
+    category: events.category,
     location: events.location,
     thumbnail: events.thumbnail,
     date: events.date,

@@ -1,12 +1,12 @@
 import { CollectionConfig } from 'payload'
 import slugify from 'slugify'
 
-export const Events: CollectionConfig = {
-  slug: 'event',
+export const Programs: CollectionConfig = {
+  slug: 'program',
   admin: {
     useAsTitle: 'title',
-    description: 'Add Event',
-    group: 'Events Collection',
+    description: 'Add Program',
+    group: 'Programs Collection',
   },
   fields: [
     {
@@ -40,42 +40,7 @@ export const Events: CollectionConfig = {
       type: 'textarea',
       required: true,
     },
-
-    {
-      name: 'category',
-      label: 'Category',
-      type: 'relationship',
-      relationTo: 'program',
-      required: true,
-    },
-
-    {
-      name: 'location',
-      label: 'Location',
-      type: 'text',
-      required: true,
-    },
-
-    {
-      name: 'thumbnail',
-      label: 'Thumbnail Photo',
-      type: 'upload',
-      relationTo: 'media',
-      required: true,
-    },
-    {
-      name: 'date',
-      label: 'Event Date',
-      type: 'text',
-      required: true,
-    },
-    {
-      name: 'purchaseLink',
-      label: 'Registration Link',
-      type: 'text',
-      required: true,
-    },
   ],
 }
 
-export default Events
+export default Programs
