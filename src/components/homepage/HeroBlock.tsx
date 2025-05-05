@@ -279,7 +279,7 @@ export default function HeroBlock({ block }: HeroBlockProps) {
               variants={itemVariants}
             >
               <Link
-                href=""
+                href="/programs"
                 className="group bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-900 font-medium px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg rounded-lg flex items-center justify-center shadow-lg transition-transform hover:-translate-y-1 active:translate-y-0"
               >
                 Join Our Program
@@ -298,7 +298,7 @@ export default function HeroBlock({ block }: HeroBlockProps) {
               </Link>
 
               <Link
-                href=""
+                href="/about-us"
                 className="bg-transparent border-2 border-yellow-500/80 text-yellow-500 hover:bg-blue-800/30 px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg rounded-lg flex items-center justify-center transition-transform hover:-translate-y-1 active:translate-y-0"
               >
                 Learn More
