@@ -54,9 +54,9 @@ export default function Navbar() {
                 ></div>
                 <div className="flex flex-col">
                   <span
-                    className={`font-serif text-xl font-bold ${scrolled ? 'text-blue-900' : 'text-[#ffffff]'} tracking-wide`}
+                    className={`font-serif text-base md:text-xl font-bold ${scrolled ? 'text-blue-900' : 'text-[#ffffff]'} tracking-wide`}
                   >
-                    Mayad<span className="text-[#EAB308]"> World</span>
+                    Mayad<span className="text-[#EAB308]"> World</span> Connections
                   </span>
                   <span
                     className={`text-xs ${scrolled ? 'text-[#34373e]/80' : 'text-[#ffffff]/80'} tracking-wider uppercase`}

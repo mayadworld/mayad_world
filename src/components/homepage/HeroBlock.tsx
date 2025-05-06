@@ -99,7 +99,7 @@ export default function HeroBlock({ block }: HeroBlockProps) {
   return (
     <section
       ref={ref}
-      className="relative min-h-[80vh] md:min-h-[120vh] xl:min-h-[90vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 flex items-center justify-center"
+      className="relative min-h-[50vh] md:min-h-[120vh] xl:min-h-[90vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 flex items-center justify-center"
     >
       {/* Mobile background image (visible only on small screens) */}
       <div className="absolute inset-0 md:hidden">
@@ -177,35 +177,6 @@ export default function HeroBlock({ block }: HeroBlockProps) {
         </svg>
       </div>
 
-      {/* Animated decorative elements */}
-      <motion.div
-        className="absolute top-1/4 right-1/4 w-64 h-64 bg-yellow-400 rounded-full filter blur-3xl opacity-5"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.05, 0.08, 0.05],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          repeatType: 'reverse',
-        }}
-      />
-
-      <motion.div
-        className="absolute bottom-1/3 left-1/5 w-72 h-72 bg-blue-600 rounded-full filter blur-3xl opacity-10"
-        animate={{
-          scale: [1, 1.3, 1],
-          opacity: [0.1, 0.15, 0.1],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Infinity,
-          repeatType: 'reverse',
-          delay: 2,
-        }}
-      />
-
-      {/* Main content grid */}
       <div className="xl:container mx-auto h-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Content side */}
         <div className="flex flex-col justify-center py-12 md:py-16 lg:py-0 lg:col-span-6 z-10">
