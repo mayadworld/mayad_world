@@ -20,6 +20,7 @@ export default function Navbar() {
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about-us' },
     { label: 'Events', link: '/events' },
+    { label: 'Gallery', link: '/gallery' },
     { label: 'Contact', link: '/contact-us' },
     { label: 'Registration', link: '/register' },
   ]

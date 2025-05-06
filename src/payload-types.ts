@@ -74,6 +74,7 @@ export interface Config {
     services: Service;
     event: Event;
     program: Program;
+    gallery: Gallery;
     forms: Form;
     'form-submissions': FormSubmission;
     'payload-locked-documents': PayloadLockedDocument;
@@ -89,6 +90,7 @@ export interface Config {
     services: ServicesSelect<false> | ServicesSelect<true>;
     event: EventSelect<false> | EventSelect<true>;
     program: ProgramSelect<false> | ProgramSelect<true>;
+    gallery: GallerySelect<false> | GallerySelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -332,6 +334,19 @@ export interface Program {
   createdAt: string;
 }
 /**
+ * Add Image
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery".
+ */
+export interface Gallery {
+  id: number;
+  title: string;
+  image: number | Media;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "forms".
  */
@@ -561,6 +576,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'program';
         value: number | Program;
+      } | null)
+    | ({
+        relationTo: 'gallery';
+        value: number | Gallery;
       } | null)
     | ({
         relationTo: 'forms';
@@ -808,6 +827,16 @@ export interface ProgramSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   description?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "gallery_select".
+ */
+export interface GallerySelect<T extends boolean = true> {
+  title?: T;
+  image?: T;
   updatedAt?: T;
   createdAt?: T;
 }

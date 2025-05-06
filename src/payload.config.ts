@@ -17,6 +17,7 @@ import Services from './collections/Services'
 import Events from './collections/Events'
 import Newsletter from './collections/Newsletter'
 import Programs from './collections/Programs'
+import Gallery from './collections/Gallery'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -27,10 +28,10 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Newsletter, Pages, Services, Events, Programs],
+  collections: [Users, Media, Newsletter, Pages, Services, Events, Programs, Gallery],
   editor: lexicalEditor(),
-  // serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL,
-  serverURL: 'http://localhost:3000',
+  serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL,
+  // serverURL: 'http://localhost:3000',
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
