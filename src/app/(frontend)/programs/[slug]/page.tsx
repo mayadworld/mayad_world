@@ -14,7 +14,6 @@ import ProgramsHero from '@/components/programspage/ProgDetailsHero'
 
 export default async function ProgramDetails({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-
   const payloadClient = await getPayload({ config })
 
   // Step 1: Fetch the program by slug

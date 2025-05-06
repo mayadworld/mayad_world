@@ -29,8 +29,8 @@ export default buildConfig({
   },
   collections: [Users, Media, Newsletter, Pages, Services, Events, Programs],
   editor: lexicalEditor(),
-  serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL,
-  // serverURL: 'http://localhost:3000',
+  // serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL,
+  serverURL: 'http://localhost:3000',
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
@@ -42,18 +42,18 @@ export default buildConfig({
     },
   }),
   sharp,
-  // email: nodemailerAdapter({
-  //   defaultFromAddress: `${process.env.EMAIL_USER}`,
-  //   defaultFromName: 'LilanKichwenKadima',
-  //   transport: await nodemailer.createTransport({
-  //     host: process.env.SMTP_HOST,
-  //     port: Number(process.env.SMTP_PORT),
-  //     auth: {
-  //       user: process.env.SMTP_USER,
-  //       pass: process.env.SMTP_PASS,
-  //     },
-  //   }),
-  // }),
+  email: nodemailerAdapter({
+    defaultFromAddress: `${process.env.EMAIL_USER}`,
+    defaultFromName: 'Mayad World',
+    transport: await nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    }),
+  }),
   plugins: [
     s3Storage({
       collections: {
@@ -81,7 +81,7 @@ export default buildConfig({
         payment: false,
       },
       redirectRelationships: ['pages'],
-      defaultToEmail: 'mayadworld@outlook.com',
+      defaultToEmail: 'devongeoffreymaina@gmail.com',
       formOverrides: {
         admin: {
           group: 'Forms',

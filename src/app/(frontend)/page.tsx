@@ -27,7 +27,6 @@ export default async function HomePage() {
     return <div>Page not found</div>
   }
 
-  // Render the page layout dynamically
   return (
     <div>
       <div className="page">
@@ -45,16 +44,16 @@ function renderBlock(block: any, index: number) {
   switch (block.blockType) {
     case 'hero':
       return <HeroBlock key={index} block={block} />
+
     case 'home-about':
       return <AboutUsSection key={index} block={block} />
-    // case 'our-team':
-    //   return <TeamSection key={index} block={block} />
+
     case 'services-block':
       return <ServicesCarouselSection key={index} block={block} />
+
     case 'why-choose-us':
       return <WhyBlock key={index} block={block} />
-    // case 'cta-section':
-    //   return <CTABlock key={index} block={block} />
+
     default:
       return null
   }

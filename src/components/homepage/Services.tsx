@@ -122,7 +122,7 @@ export default function ServicesSection({ block }: ServicesBlockProps) {
           className="text-center mt-16"
         >
           <Link
-            href="/services"
+            href="/programs"
             className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-blue-900 font-semibold rounded-lg shadow-lg shadow-yellow-500/20 hover:shadow-xl hover:shadow-yellow-500/30 transition-all duration-300 hover:-translate-y-1"
           >
             <span>Explore all programs</span>
