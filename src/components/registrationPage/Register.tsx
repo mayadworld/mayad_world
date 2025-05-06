@@ -301,13 +301,17 @@ export default function RegistrationForm() {
                 <div className="bg-blue-50 rounded-lg p-4 mb-6">
                   <h4 className="font-medium text-blue-900 mb-2">Upcoming Events</h4>
                   <ul className="space-y-3 text-sm">
-                    <li className="flex items-start">
-                      <Calendar size={16} className="text-blue-800 mr-2 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <p className="text-blue-900">Summer Session 2025</p>
-                        <p className="text-blue-700">June 15 - August 10</p>
-                      </div>
-                    </li>
+                    {events.map((event) => {
+                      return (
+                        <li key={eventType} className="flex items-start">
+                          <Calendar size={16} className="text-blue-100 mr-2 mt-0.5 flex-shrink-0" />
+                          <div>
+                            <p className="text-white">{event.title}</p>
+                            <p className="text-blue-200">{event.date}</p>
+                          </div>
+                        </li>
+                      )
+                    })}
                   </ul>
                 </div>
               </div>
