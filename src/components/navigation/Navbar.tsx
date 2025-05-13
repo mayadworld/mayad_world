@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 interface NavItems {
   label: string
@@ -50,9 +51,24 @@ export default function Navbar() {
               <div
                 className={`flex items-center gap-2 transition-all duration-300 ${scrolled ? 'bg-[#ffffff] p-2 rounded' : ''}`}
               >
-                <div
-                  className={`w-12 h-12 rounded-full ${scrolled ? 'bg-blue-900' : 'bg-[#eab308]'}  backdrop-blur-md border border-white/20 flex flex-col items-center justify-center relative`}
-                ></div>
+                <div>
+                  <Image
+                    src="/logolight.png"
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                    className={`w-12 h-12 rounded-full object-cover ${scrolled ? 'hidden' : 'flex'}`}
+                  />
+                </div>
+                <div>
+                  <Image
+                    src="/logo.png"
+                    alt="Logo"
+                    width={50}
+                    height={50}
+                    className={`w-12 h-12 rounded-full object-cover ${scrolled ? 'flex' : 'hidden'}`}
+                  />
+                </div>
                 <div className="flex flex-col">
                   <span
                     className={`font-serif text-base md:text-xl font-bold ${scrolled ? 'text-blue-900' : 'text-[#ffffff]'} tracking-wide`}

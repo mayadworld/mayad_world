@@ -10,6 +10,7 @@ import {
   Phone,
   ChevronRight,
 } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   const navItems = [
@@ -27,7 +28,15 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         <div className="space-y-8">
           <div className="flex items-center gap-2 transition-all duration-300">
-            <div className="w-12 h-12 rounded-full bg-[#eab308] backdrop-blur-md border border-white/20 flex flex-col items-center justify-center relative"></div>
+            <div>
+              <Image
+                src="/logolight.png"
+                alt="Logo"
+                width={50}
+                height={50}
+                className="w-12 h-12 rounded-full object-cover"
+              />
+            </div>
             <div className="flex flex-col">
               <span className="font-serif text-xl font-bold text-[#ffffff] tracking-wide">
                 Mayad<span className="text-[#EAB308]"> World</span>
