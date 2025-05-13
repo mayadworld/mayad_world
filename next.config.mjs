@@ -4,7 +4,12 @@ import { withPayload } from '@payloadcms/next/withPayload'
 const nextConfig = {
   // Your Next.js config here
   images: {
-    domains: ['localhost', 'mayadworld-production.up.railway.app'],
+    domains: [
+      'localhost',
+      'mayadworld-production-c63e.up.railway.app',
+      'mayadworld.com',
+      'www.mayadworld.com',
+    ],
   },
 }
 
