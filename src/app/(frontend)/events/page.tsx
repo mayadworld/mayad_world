@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import React from 'react'
 import EventsHero from '@/components/eventsPage/EventsHero'
 import EventsList from '@/components/eventsPage/EventsList'

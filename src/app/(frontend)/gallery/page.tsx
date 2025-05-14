@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import React from 'react'
 import GalleryHero from '@/components/gallery/GalleryHero'
 import PaginationComponent from '@/components/navigation/PaginationComponent'

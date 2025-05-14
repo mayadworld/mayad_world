@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getPayload } from 'payload'
 import React from 'react'
 import ContactHero from '@/components/contactPage/ContactHero'

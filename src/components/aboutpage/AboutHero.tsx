@@ -56,7 +56,7 @@ export default function AboutHero({ block }: AboutHeroBlockProps) {
           <div className="order-1 lg:order-2 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/30 transform rotate-1 hover:rotate-0 transition-all duration-300">
               <Image
-                src={block.photo?.url || '/bg.jpg'}
+                src={block.photo?.url}
                 width={900}
                 height={1200}
                 priority

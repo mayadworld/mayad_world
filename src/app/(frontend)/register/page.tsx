@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import React from 'react'
 import RegisterHero from '@/components/registrationPage/RegisterHero'
 import RegistrationForm from '@/components/registrationPage/Register'

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import React from 'react'
 import ProgramsHero from '@/components/programspage/ProgramsHero'
 import ProgramsList from '@/components/programspage/ProgramsList'

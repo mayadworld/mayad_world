@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { getPayload } from 'payload'
 import React from 'react'
 import AboutHero from '@/components/aboutpage/AboutHero'
