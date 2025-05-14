@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [progRes] = await Promise.all([
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}/events`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/programs`, {
       next: { revalidate: 3600 },
     }),
   ])
