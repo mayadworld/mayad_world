@@ -145,7 +145,7 @@ export default function HeroBlock({ block }: HeroBlockProps) {
   return (
     <section
       ref={ref}
-      className="relative min-h-[50vh] md:min-h-[120vh] xl:min-h-[120vh] 2xl:min-h-[80vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 py-20 md:py-0 md:pt-20 flex items-center justify-center"
+      className="relative min-h-[70vh] md:min-h-[120vh] xl:min-h-[120vh] 2xl:min-h-[80vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-20 md:py-0 md:pt-20 flex items-center justify-center"
     >
       {/* Background Carousel - works on all screen sizes */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -184,7 +184,7 @@ export default function HeroBlock({ block }: HeroBlockProps) {
         <div className="absolute inset-0 bg-gradient-to-b md:bg-gradient-to-r from-blue-900 via-blue-900/80 to-blue-900/60" />
       </div>
 
-      <div className="xl:container mx-auto h-full grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="xl:container mx-auto h-full grid grid-cols-1 lg:grid-cols-12 gap-0 md:gap-6 lg:gap-8 px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Content side */}
         <div className="flex flex-col justify-center py-12 md:py-16 lg:py-0 lg:col-span-6 z-10">
           <motion.div
@@ -288,7 +288,7 @@ export default function HeroBlock({ block }: HeroBlockProps) {
 
         <div className="lg:col-span-1"></div>
 
-        <div className="relative lg:col-span-4 lg:h-full z-10 pt-8 lg:pt-0">
+        <div className="relative lg:col-span-4 lg:h-full z-10 pt-0 lg:pt-0 hidden md:block">
           <motion.div
             className="relative"
             initial={{ opacity: 0, scale: 0.8 }}
