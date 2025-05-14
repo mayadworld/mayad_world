@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Target, Eye, ArrowRight, Globe, Users } from 'lucide-react'
+import Link from 'next/link'
 
 interface GoalsBlockProps {
   block: {
@@ -61,10 +62,13 @@ export default function GoalsSection({ block }: GoalsBlockProps) {
                 Join delegates from around the world in simulating international diplomacy.
               </p>
             </div>
-            <button className="inline-flex items-center bg-white text-blue-600 hover:bg-blue-50 transition-colors font-medium px-6 py-3 rounded-lg shadow-sm">
+            <Link
+              href="/register"
+              className="inline-flex items-center bg-white text-blue-600 hover:bg-blue-50 transition-colors font-medium px-6 py-3 rounded-lg shadow-sm"
+            >
               Register Now
               <ArrowRight size={16} className="ml-2" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

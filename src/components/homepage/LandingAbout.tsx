@@ -67,7 +67,7 @@ export default function AboutUsSection({ block }: AboutUsBlockProps) {
 
             <div className="pt-2">
               <Link
-                href="/who-we-are"
+                href="/about-us"
                 className="inline-flex items-center text-sm font-medium text-gray-900 hover:text-blue-800 group transition-colors duration-200"
               >
                 <span>Learn more about our expertise</span>

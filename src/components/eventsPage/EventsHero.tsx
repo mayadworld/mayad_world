@@ -60,7 +60,7 @@ export default function EventsHero() {
             <ArrowRight size={18} />
           </Link>
           <Link
-            href="/registration"
+            href="/register"
             className="px-6 py-3 bg-blue-800/50 hover:bg-blue-800 text-white border border-blue-700/50 font-medium rounded-lg transition-all backdrop-blur-sm"
           >
             Join Our Network

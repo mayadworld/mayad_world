@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function CTABlock() {
@@ -19,12 +20,18 @@ export default function CTABlock() {
                 diplomatic experience.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 py-3 bg-amber-400 hover:bg-amber-500 text-blue-900 font-medium rounded-lg transition-colors shadow-lg">
+                <Link
+                  href="/register"
+                  className="px-6 py-3 bg-amber-400 hover:bg-amber-500 text-blue-900 font-medium rounded-lg transition-colors shadow-lg"
+                >
                   Register Now
-                </button>
-                <button className="px-6 py-3 bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 font-medium rounded-lg transition-colors">
+                </Link>
+                <Link
+                  href="/about-us"
+                  className="px-6 py-3 bg-transparent border border-white text-white hover:bg-white hover:text-blue-900 font-medium rounded-lg transition-colors"
+                >
                   Learn More
-                </button>
+                </Link>
               </div>
             </div>
           </div>
