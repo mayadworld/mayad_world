@@ -6,6 +6,31 @@ import ContactSocials from '@/components/contactPage/ContactSocials'
 
 import config from '@/payload.config'
 
+export const metadata = {
+  title: 'Contact Us - Mayad World Connections',
+  description:
+    'Get in touch with Mayad World Connections to learn more about our programs, partnerships, and opportunities for youth engagement and global education.',
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
+  openGraph: {
+    title: 'Connect with Mayad World Connections',
+    description:
+      'Reach out to Mayad World Connections for inquiries about our Model UN conferences, educational travel programs, and youth empowerment initiatives.',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/contact-us`,
+    images: [
+      {
+        url: '/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mayad World Connections',
+      },
+    ],
+    type: 'website',
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/contact-us`,
+  },
+}
+
 export default async function ContactPage() {
   const payloadConfig = await config
   const payload = await getPayload({ config: payloadConfig })

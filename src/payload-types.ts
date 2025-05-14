@@ -189,7 +189,14 @@ export interface Page {
         | {
             heading: string;
             subheading: string;
-            hero_image: number | Media;
+            /**
+             * Add up to 4 images for the carousel. Images will automatically rotate.
+             */
+            hero_image: {
+              image: number | Media;
+              alt: string;
+              id?: string | null;
+            }[];
             id?: string | null;
             blockName?: string | null;
             blockType: 'hero';
@@ -689,7 +696,13 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               heading?: T;
               subheading?: T;
-              hero_image?: T;
+              hero_image?:
+                | T
+                | {
+                    image?: T;
+                    alt?: T;
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };

@@ -12,6 +12,57 @@ import Link from 'next/link'
 import { Calendar, MapPin, ChevronRight } from 'lucide-react'
 import ProgramsHero from '@/components/programspage/ProgDetailsHero'
 
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+
+  const payloadConfig = await config
+  const payload = await getPayload({ config: payloadConfig })
+
+  const { docs } = await payload.find({
+    collection: 'program',
+    where: {
+      slug: {
+        equals: slug,
+      },
+    },
+  })
+
+  const team_member = docs[0]
+
+  if (!team_member) {
+    return {
+      title: 'Program Not Found - Mayad World Connections',
+      description: 'The program you are looking for could not be found.',
+    }
+  }
+
+  const progName = team_member.title
+  const progDesc = team_member.description
+
+  return {
+    title: `${progName} | Mayad World Connections`,
+    description: progDesc,
+    metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
+    openGraph: {
+      title: `${progName} | Mayad World Connections`,
+      description: progDesc,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL}/our-team/${slug}`,
+      images: [
+        {
+          url: '/logo.png',
+          width: 1200,
+          height: 630,
+          alt: 'Mayad World Connections',
+        },
+      ],
+      type: 'profile',
+    },
+    alternates: {
+      canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/programs/${slug}`,
+    },
+  }
+}
+
 export default async function ProgramDetails({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const payloadClient = await getPayload({ config })

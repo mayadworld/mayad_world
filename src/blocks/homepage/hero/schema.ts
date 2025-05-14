@@ -16,9 +16,28 @@ export const Hero: Block = {
     {
       name: 'hero_image',
       label: 'Hero Image',
-      type: 'upload',
-      relationTo: 'media',
+      type: 'array',
       required: true,
+      minRows: 1,
+      maxRows: 4,
+      admin: {
+        description: 'Add up to 4 images for the carousel. Images will automatically rotate.',
+      },
+      fields: [
+        {
+          name: 'image',
+          label: 'Image',
+          type: 'upload',
+          relationTo: 'media',
+          required: true,
+        },
+        {
+          name: 'alt',
+          label: 'Alt Text',
+          type: 'text',
+          required: true,
+        },
+      ],
     },
   ],
 }

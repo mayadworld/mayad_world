@@ -10,6 +10,31 @@ type Props = {
   }>
 }
 
+export const metadata = {
+  title: 'Gallery - Mayad World Connections',
+  description:
+    'Explore our gallery to see highlights from Mayad World Connections’ Model UN conferences, educational tours, cultural exchanges, and global leadership programs.',
+  metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
+  openGraph: {
+    title: 'Gallery | Mayad World Connections in Action',
+    description:
+      'View inspiring moments from our global events, youth leadership experiences, and educational journeys around the world.',
+    url: `${process.env.NEXT_PUBLIC_SITE_URL}/gallery`,
+    images: [
+      {
+        url: '/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mayad World Connections',
+      },
+    ],
+    type: 'website',
+  },
+  alternates: {
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL}/gallery`,
+  },
+}
+
 export default async function GalleryPage({ searchParams }: Props) {
   const resolvedParams = await searchParams
   const currentPage = Number(resolvedParams?.page) || 1
