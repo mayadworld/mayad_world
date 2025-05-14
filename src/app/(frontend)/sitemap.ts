@@ -13,7 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const postsData = await progRes.json()
 
-  const prog: { slug: string }[] = postsData.docs
+  const prog: { slug: string }[] = postsData
 
   const postEntries: MetadataRoute.Sitemap = prog.map((post: { slug: string }) => ({
     type: 'programs',
