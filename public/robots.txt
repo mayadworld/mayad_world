@@ -1,0 +1,21 @@
+# *
+User-agent: *
+Allow: /
+Allow: /about-us
+Allow: /contact-us
+Allow: /register
+Allow: /events
+Allow: /programs
+Allow: /gallery
+
+# *
+User-agent: *
+Disallow: /admin/
+Disallow: /api/
+Disallow: /__next/
+
+# Host
+Host: https://www.mayadworld.com
+
+# Sitemaps
+Sitemap: https://www.mayadworld.com/sitemap.xml
