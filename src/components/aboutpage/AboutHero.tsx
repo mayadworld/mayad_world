@@ -24,7 +24,7 @@ export default function AboutHero({ block }: AboutHeroBlockProps) {
   }, [] as string[])
 
   return (
-    <section className="relative bg-gradient-to-b from-blue-950 to-blue-900 overflow-hidden">
+    <section className="relative bg-gradient-to-b from-blue-950 to-blue-900 overflow-hidden pb-8 md:pb-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-32 md:pt-0 md:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Column */}

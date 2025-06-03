@@ -190,7 +190,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
           {/* Bottom CTA */}
           <motion.div variants={fadeInUp} className="mt-16 text-center">
             <Link
-              href="/contact"
+              href="/contact-us"
               className="inline-flex items-center gap-2 bg-[#eab308] text-blue-950 px-8 py-4 rounded-full font-bold hover:bg-[#eab308]/90 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Get In Touch
