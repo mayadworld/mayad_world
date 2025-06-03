@@ -98,16 +98,16 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin size={18} className="text-[#74b1dd] flex-shrink-0 mt-1" />
               <p className="text-white/70 text-sm">
-                123 Legal Avenue, Suite 500
+                3rd Floor, Muchane Plaza
                 <br />
-                Nairobi, Kenya
+                Kikuyu, Kenya
               </p>
             </div>
 
             <div className="flex items-center gap-3">
               <Mail size={18} className="text-[#74b1dd] flex-shrink-0" />
               <a
-                href="mailto:info@lkkadvocates.com"
+                href="mailto:info@mayadworld.com"
                 className="text-white/70 hover:text-white text-sm transition-colors"
               >
                 info@mayadworld.com
@@ -117,19 +117,10 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Phone size={18} className="text-[#74b1dd] flex-shrink-0" />
               <a
-                href="tel:+254721537292"
+                href="tel:+254715337850"
                 className="text-white/70 hover:text-white text-sm transition-colors"
               >
-                +254 721 537292
-              </a>
-            </div>
-            <div className="flex items-center gap-3">
-              <Phone size={18} className="text-[#74b1dd] flex-shrink-0" />
-              <a
-                href="tel:+254721437291"
-                className="text-white/70 hover:text-white text-sm transition-colors"
-              >
-                +254 721 437291
+                +254 715 337850
               </a>
             </div>
           </div>
@@ -144,16 +135,10 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-8">
-            <p className="text-white/50 text-xs">
-              Lorem ipsum dor sit amet consectetur adipisicing elit. Temporibus illo porro
-              exercitationem.
-            </p>
+            <p className="text-white/50 text-xs">Connecting You To the World</p>
           </div>
         </div>
       </div>
-
-      {/* Bottom accent line */}
-      <div className="h-px bg-[#003566] w-full mt-16"></div>
     </footer>
   )
 }
