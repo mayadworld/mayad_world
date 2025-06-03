@@ -17,8 +17,8 @@ export default function Footer() {
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about-us' },
     { label: 'Events', link: '/events' },
-    { label: 'Contact', link: '/contact' },
-    { label: 'Registration', link: '/registration' },
+    { label: 'Contact', link: '/contact-us' },
+    { label: 'Registration', link: '/register' },
   ]
   return (
     <footer className="bg-blue-900 py-16 px-8 md:px-12 lg:px-16">

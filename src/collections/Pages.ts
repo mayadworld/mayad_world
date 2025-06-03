@@ -3,7 +3,7 @@ import { LandingAbout } from '@/blocks/homepage/home-about/schema'
 import { ServicesBlock } from '@/blocks/homepage/services/schema'
 import { WhyChooseUs } from '@/blocks/homepage/why-us/schema'
 import type { CollectionConfig } from 'payload'
-import { About, Goals, Values } from '@/blocks/about/schema'
+import { About, Goals, Values, OurTeam } from '@/blocks/about/schema'
 import { Contact, ContactAddresses } from '@/blocks/contactPage/schema'
 
 export const Pages: CollectionConfig = {
@@ -36,6 +36,7 @@ export const Pages: CollectionConfig = {
         About,
         Goals,
         Values,
+        OurTeam,
         Contact,
         ContactAddresses,
       ],

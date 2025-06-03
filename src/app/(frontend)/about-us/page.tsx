@@ -5,6 +5,7 @@ import React from 'react'
 import AboutHero from '@/components/aboutpage/AboutHero'
 import GoalsSection from '@/components/aboutpage/Goals'
 import ValuesSection from '@/components/aboutpage/Values'
+import TeamSection from '@/components/aboutpage/TeamSection'
 import config from '@/payload.config'
 
 export const metadata = {
@@ -61,6 +62,8 @@ function renderBlock(block: any, index: number) {
       return <GoalsSection key={index} block={block} />
     case 'core-values':
       return <ValuesSection key={index} block={block} />
+    case 'ourTeam':
+      return <TeamSection key={index} block={block} />
     default:
       return null
   }

@@ -51,3 +51,18 @@ export const Values: Block = {
     },
   ],
 }
+
+export const OurTeam: Block = {
+  slug: 'ourTeam',
+  admin: { group: 'About Page' },
+
+  fields: [
+    {
+      name: 'team_profiles',
+      label: 'Member Profiles',
+      type: 'relationship',
+      relationTo: 'team',
+      hasMany: true,
+    },
+  ],
+}

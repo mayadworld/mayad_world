@@ -13,6 +13,7 @@ import nodemailer from 'nodemailer'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
+import Team from './collections/Team'
 import Services from './collections/Services'
 import Events from './collections/Events'
 import Newsletter from './collections/Newsletter'
@@ -28,7 +29,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Newsletter, Pages, Services, Events, Programs, Gallery],
+  collections: [Users, Media, Newsletter, Pages, Services, Events, Programs, Gallery, Team],
   editor: lexicalEditor(),
   serverURL: process.env.NEXT_PUBLIC_PAYLOAD_URL,
   // serverURL: 'http://localhost:3000',

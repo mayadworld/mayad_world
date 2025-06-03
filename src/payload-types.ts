@@ -75,6 +75,7 @@ export interface Config {
     event: Event;
     program: Program;
     gallery: Gallery;
+    team: Team;
     forms: Form;
     'form-submissions': FormSubmission;
     'payload-locked-documents': PayloadLockedDocument;
@@ -91,6 +92,7 @@ export interface Config {
     event: EventSelect<false> | EventSelect<true>;
     program: ProgramSelect<false> | ProgramSelect<true>;
     gallery: GallerySelect<false> | GallerySelect<true>;
+    team: TeamSelect<false> | TeamSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -256,6 +258,12 @@ export interface Page {
             blockType: 'core-values';
           }
         | {
+            team_profiles?: (number | Team)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'ourTeam';
+          }
+        | {
             title: string;
             description: string;
             id?: string | null;
@@ -304,6 +312,24 @@ export interface Service {
   id: number;
   title: string;
   description: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Add Team Member
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team".
+ */
+export interface Team {
+  id: number;
+  name: string;
+  slug: string;
+  photo: number | Media;
+  role: string;
+  email: string;
+  phone: string;
+  bio: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -589,6 +615,10 @@ export interface PayloadLockedDocument {
         value: number | Gallery;
       } | null)
     | ({
+        relationTo: 'team';
+        value: number | Team;
+      } | null)
+    | ({
         relationTo: 'forms';
         value: number | Form;
       } | null)
@@ -766,6 +796,13 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        ourTeam?:
+          | T
+          | {
+              team_profiles?: T;
+              id?: T;
+              blockName?: T;
+            };
         contact?:
           | T
           | {
@@ -850,6 +887,21 @@ export interface ProgramSelect<T extends boolean = true> {
 export interface GallerySelect<T extends boolean = true> {
   title?: T;
   image?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team_select".
+ */
+export interface TeamSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  photo?: T;
+  role?: T;
+  email?: T;
+  phone?: T;
+  bio?: T;
   updatedAt?: T;
   createdAt?: T;
 }
