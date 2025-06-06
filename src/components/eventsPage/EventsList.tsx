@@ -20,7 +20,7 @@ export default async function EventsList() {
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16">
             <p className="text-gray-700 text-lg">
-              Don{"'"}t miss our exciting MUN events and conferences happening throughout the year
+              Don{"'"}t miss our exciting events and conferences happening throughout the year.
             </p>
             <div className="w-24 h-1 bg-amber-400 mx-auto mt-6"></div>
           </div>

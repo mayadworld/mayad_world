@@ -62,7 +62,7 @@ export default function ServicesSection({ block }: ServicesBlockProps) {
 
           {/* Badge */}
           <span className="inline-block px-4 py-1 rounded-full bg-yellow-500/20 text-yellow-500 font-medium text-sm tracking-wide mb-4">
-            Model UN
+            What You Need
           </span>
 
           {/* Main heading */}
