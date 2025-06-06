@@ -44,7 +44,7 @@ export default function EventsHero() {
 
         {/* Description */}
         <p className="text-lg text-blue-100/80 text-center max-w-3xl mb-12 leading-relaxed">
-          Our events are more than just conferences—they{"'"}re gateways to global thinking,
+          Our events are more than just conferences-they{"'"}re gateways to global thinking,
           cultural exchange, and academic enrichment. Whether you{"'"}re stepping into your first
           committee session or representing your country on an international stage, there{"'"}s an
           experience here for you.

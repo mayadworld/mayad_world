@@ -82,7 +82,7 @@ export default buildConfig({
         payment: false,
       },
       redirectRelationships: ['pages'],
-      defaultToEmail: 'devongeoffreymaina@gmail.com',
+      defaultToEmail: 'info@mayadworld.com',
       formOverrides: {
         admin: {
           group: 'Forms',
