@@ -189,16 +189,15 @@ export interface Page {
   layout?:
     | (
         | {
-            heading: string;
-            subheading: string;
-            /**
-             * Add up to 4 images for the carousel. Images will automatically rotate.
-             */
-            hero_image: {
-              image: number | Media;
-              alt: string;
-              id?: string | null;
-            }[];
+            slider?:
+              | {
+                  heading: string;
+                  subheading: string;
+                  hero_image: number | Media;
+                  program?: (number | null) | Program;
+                  id?: string | null;
+                }[]
+              | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'hero';
@@ -303,6 +302,20 @@ export interface Page {
   createdAt: string;
 }
 /**
+ * Add Program
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "program".
+ */
+export interface Program {
+  id: number;
+  title: string;
+  slug: string;
+  description: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * Add Service
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -349,20 +362,6 @@ export interface Event {
   thumbnail: number | Media;
   date: string;
   purchaseLink: string;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * Add Program
- *
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "program".
- */
-export interface Program {
-  id: number;
-  title: string;
-  slug: string;
-  description: string;
   updatedAt: string;
   createdAt: string;
 }
@@ -724,13 +723,13 @@ export interface PagesSelect<T extends boolean = true> {
         hero?:
           | T
           | {
-              heading?: T;
-              subheading?: T;
-              hero_image?:
+              slider?:
                 | T
                 | {
-                    image?: T;
-                    alt?: T;
+                    heading?: T;
+                    subheading?: T;
+                    hero_image?: T;
+                    program?: T;
                     id?: T;
                   };
               id?: T;

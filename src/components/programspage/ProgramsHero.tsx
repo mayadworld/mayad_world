@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
-import { Users, Globe, Award, ArrowDown } from 'lucide-react'
-import Link from 'next/link'
+import { Award } from 'lucide-react'
 
 export default function ProgramsHero() {
   return (

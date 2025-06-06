@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { Award, Users, Bookmark, Calendar, MapPin } from 'lucide-react'
+import { Award } from 'lucide-react'
 
 import { fetchAllPrograms } from '@/lib/progUtil'
 

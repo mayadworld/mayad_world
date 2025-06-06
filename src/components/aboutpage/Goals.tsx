@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Target, Eye, ArrowRight, Globe, Users } from 'lucide-react'
+import { Target, Eye, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 interface GoalsBlockProps {

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import { Award, Clock, Shield, Zap, ChevronRight, Check } from 'lucide-react'
+import { Award, Clock, Shield, Zap } from 'lucide-react'
 
 interface WhyBlockProps {
   block: {
@@ -15,6 +15,7 @@ interface WhyBlockProps {
 }
 
 export default function WhyBlock({ block }: WhyBlockProps) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeItem, setActiveItem] = useState(1)
 
   const getIcon = (id: number) => {

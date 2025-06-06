@@ -3,7 +3,7 @@ import React, { useEffect } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Link from 'next/link'
-import { Globe } from 'lucide-react'
+import Image from 'next/image'
 
 interface AboutUsBlockProps {
   block: {
@@ -95,10 +95,7 @@ export default function AboutUsSection({ block }: AboutUsBlockProps) {
             <div className="absolute top-4 right-4 bottom-4 left-4 bg-gray-100" />
             <div className="absolute top-8 right-8 bottom-8 left-8 border border-[#eab308]" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <Globe
-                className="w-48 text-blue-900 animate-[spin_6s_ease-in-out_infinite]"
-                size={200}
-              />
+              <Image src="/logo.png" alt="Mayad logo" width={350} height={350} />
             </div>
           </div>
         </motion.div>
