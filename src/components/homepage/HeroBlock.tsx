@@ -145,7 +145,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
   return (
     <section
       ref={ref}
-      className="relative flex justify-center items-center h-auto 2xl:h-[70vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-14 pb-8 md:pb-0 md:pt-12 lg:pt-4"
+      className="relative flex justify-center items-center h-auto 2xl:h-[70vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-16 pb-8 md:pb-0 md:pt-12 lg:pt-4"
     >
       {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
