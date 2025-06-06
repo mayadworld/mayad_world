@@ -56,7 +56,7 @@ export default function Newsletter() {
                 Stay Updated on Events
               </h3>
               <p className="text-blue-100">
-                Get notifications about upcoming MUN conferences and special events
+                Get Notified About Upcoming Programs and Global Events
               </p>
             </div>
 

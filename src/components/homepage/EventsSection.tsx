@@ -27,7 +27,7 @@ export default async function EventsSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">Upcoming Events</h2>
             <div className="w-24 h-1 bg-amber-400 mx-auto mb-6"></div>
             <p className="text-gray-700 text-lg">
-              Don{"'"}t miss our exciting MUN events and conferences happening throughout the year
+              Don{"'"}t Miss Out on Our Exciting Programs and Global Events Happening All Year Round
             </p>
           </div>
 

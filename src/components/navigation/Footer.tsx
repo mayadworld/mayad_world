@@ -48,8 +48,9 @@ export default function Footer() {
           </div>
 
           <p className="text-white/80 text-sm leading-relaxed">
-            Whether you{"'"}re a school, student, or educator, we{"'"}re here to support your MUN
-            goals. Join our network of changemakers today.
+            Whether you{"'"}re a school, student, or educator, we{"'"}re here to support your
+            journey in global leadership, debate, STEM, and more. Join our growing network of
+            changemakers and unlock new opportunities today.
           </p>
 
           <div className="flex gap-4">
@@ -98,9 +99,9 @@ export default function Footer() {
             <div className="flex items-start gap-3">
               <MapPin size={18} className="text-[#74b1dd] flex-shrink-0 mt-1" />
               <p className="text-white/70 text-sm">
-                3rd Floor, Muchane Plaza
+                1st Floor, Office 1, Gardens Arcade
                 <br />
-                Kikuyu, Kenya
+                Gargens, Kikuyu
               </p>
             </div>
 
@@ -117,10 +118,10 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Phone size={18} className="text-[#74b1dd] flex-shrink-0" />
               <a
-                href="tel:+254715337850"
+                href="tel:+254721537292"
                 className="text-white/70 hover:text-white text-sm transition-colors"
               >
-                +254 715 337850
+                +254 721 537292
               </a>
             </div>
           </div>
