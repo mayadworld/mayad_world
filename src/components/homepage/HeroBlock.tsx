@@ -269,7 +269,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
                 {/* Action buttons */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
-                    href={currentSlideData.program.slug}
+                    href={`/programs/${currentSlideData.program.slug}`}
                     className="flex-1 bg-gradient-to-r from-yellow-500 to-yellow-600 text-blue-900 font-semibold px-6 py-3 rounded-lg text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   >
                     Details
