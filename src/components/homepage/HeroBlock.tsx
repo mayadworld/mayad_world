@@ -145,7 +145,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
   return (
     <section
       ref={ref}
-      className="relative flex justify-center items-center 2xl:h-[70vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-2 lg:pt-4"
+      className="relative flex justify-center items-center h-screen 2xl:h-[70vh] overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 pt-12 lg:pt-4"
     >
       {/* Background Image Carousel */}
       <div className="absolute inset-0 z-0">
@@ -190,7 +190,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
 
       {/* Main Content */}
       <div className="relative z-20 min-h-screen flex items-center">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="2xl:container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <div className="lg:col-span-7 space-y-6 md:space-y-8">
