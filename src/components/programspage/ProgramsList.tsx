@@ -29,7 +29,7 @@ export default async function ProgramsList() {
 
           {/* Programs Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {programs.slice(1).map((program) => (
+            {programs.map((program) => (
               <div
                 key={program.id}
                 className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col border border-gray-100"
