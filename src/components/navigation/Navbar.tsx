@@ -107,13 +107,13 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#ffffff] py-4 px-6 shadow-lg">
-          <div className="flex flex-col space-y-4">
+        <div className="md:hidden bg-[#ffffff] py-4 px-6 shadow-lg border-b-2 border-yellow-500">
+          <div className="flex flex-col space-y-5">
             {navItems.map((nav, index) => (
               <Link
                 key={index}
                 href={nav.link}
-                className="text-[#34373e] hover:text-[#003566] font-medium transition-colors duration-200"
+                className="text-[#34373e] hover:text-[#003566] font-medium transition-colors duration-200 border-b-2 border-blue-900 py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {nav.label}
