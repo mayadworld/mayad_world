@@ -304,10 +304,10 @@ export default function RegistrationForm() {
                     {events.map((event) => {
                       return (
                         <li key={eventType} className="flex items-start">
-                          <Calendar size={16} className="text-blue-100 mr-2 mt-0.5 flex-shrink-0" />
+                          <Calendar size={16} className="text-blue-900 mr-2 mt-0.5 flex-shrink-0" />
                           <div>
-                            <p className="text-white">{event.title}</p>
-                            <p className="text-blue-200">{event.date}</p>
+                            <p className="text-yellow-400">{event.title}</p>
+                            <p className="text-blue-900">{event.date}</p>
                           </div>
                         </li>
                       )
