@@ -15,6 +15,7 @@ export default function Navbar() {
   const navItems = [
     { label: 'Home', link: '/' },
     { label: 'About', link: '/about-us' },
+    { label: 'Programs', link: '/programs' },
     { label: 'Events', link: '/events' },
     { label: 'Gallery', link: '/gallery' },
     { label: 'Contact', link: '/contact-us' },
