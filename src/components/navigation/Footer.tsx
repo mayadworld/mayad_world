@@ -101,7 +101,7 @@ export default function Footer() {
               <p className="text-white/70 text-sm">
                 1st Floor, Office 1, Gardens Arcade
                 <br />
-                Gargens, Kikuyu
+                Gardens, Kikuyu
               </p>
             </div>
 
