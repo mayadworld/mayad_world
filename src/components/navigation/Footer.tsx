@@ -136,7 +136,7 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-8">
-            <p className="text-white/50 text-xs">Connecting You To the World</p>
+            <p className="text-white/50 text-xs">Connecting You To The World</p>
           </div>
         </div>
       </div>
