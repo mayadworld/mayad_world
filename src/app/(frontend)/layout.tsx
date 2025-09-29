@@ -2,6 +2,7 @@ import React from 'react'
 import './styles.css'
 import Navbar from '@/components/navigation/Navbar'
 import Footer from '@/components/navigation/Footer'
+import Script from 'next/script'
 
 export const metadata = {
   title: 'Mayad World Connections | Youth Programs & Model UN Conferences in Kenya',
@@ -34,6 +35,20 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7TCK3SVFKH"
+          strategy="afterInteractive"
+          async
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7TCK3SVFKH');
+          `}
+        </Script>
         <main>
           <Navbar />
           {children}
