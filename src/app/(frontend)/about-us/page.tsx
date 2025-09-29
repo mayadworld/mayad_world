@@ -9,14 +9,14 @@ import TeamSection from '@/components/aboutpage/TeamSection'
 import config from '@/payload.config'
 
 export const metadata = {
-  title: 'About Us - Mayad World Connections',
+  title: 'About Us - Mayad World Connections Kenya',
   description:
-    'Learn about Mayad World Connections, a youth-focused organization dedicated to developing global leaders through Model UN, academic travel, and educational consulting.',
+    'Mayad World Connections is a youth-focused organization in Kenya empowering students through Model UN conferences, STEM programs, Olympiads, debates, educational travel, and academic consulting. Learn about our mission, values, and impact.',
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
   openGraph: {
-    title: 'About Mayad World Connections - Bridging Cultures, Ideas, and Opportunities',
+    title: 'About Mayad World Connections - Youth Leadership & Academic Programs in Kenya',
     description:
-      'Discover how Mayad World Connections equips young people with tools and platforms to lead confidently in a globally connected world. Learn about our mission, values, and impact.',
+      'Discover how Mayad World Connections equips young people in Kenya with tools and platforms to lead confidently in a globally connected world. Learn about our mission, values, and impact.',
     url: `${process.env.NEXT_PUBLIC_SITE_URL}/about-us`,
     images: [
       {

@@ -4,14 +4,14 @@ import Navbar from '@/components/navigation/Navbar'
 import Footer from '@/components/navigation/Footer'
 
 export const metadata = {
-  title: 'Mayad World Connections',
+  title: 'Mayad World Connections | Youth Programs & Model UN Conferences in Kenya',
   description:
-    'Mayad World Connections empowers youth to become global leaders and changemakers through Model UN conferences, educational travel, and academic consulting. We bridge cultures and ideas for a more connected world.',
+    'Mayad World Connections empowers youth in Kenya through Model UN conferences, STEM programs, debates, Olympiads, educational travel, and academic consulting. Join us in shaping global leaders and changemakers of tomorrow.',
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
   openGraph: {
-    title: 'Mayad World Connections – Empowering Youth for Global Impact',
+    title: 'Mayad World Connections – Youth Programs in Kenya',
     description:
-      'Join Mayad World Connections in shaping the next generation of global thinkers through immersive Model UN experiences, cross-cultural education, and innovative leadership programs.',
+      'Discover Model UN events, STEM initiatives, debates, Olympiads, and leadership programs with Mayad World Connections. Empowering youth for global impact.',
     url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
     images: [
       {

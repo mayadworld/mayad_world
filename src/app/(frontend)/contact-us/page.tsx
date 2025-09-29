@@ -9,9 +9,9 @@ import ContactSocials from '@/components/contactPage/ContactSocials'
 import config from '@/payload.config'
 
 export const metadata = {
-  title: 'Contact Us - Mayad World Connections',
+  title: 'Contact Us - Mayad World Connections Kenya',
   description:
-    'Get in touch with Mayad World Connections to learn more about our programs, partnerships, and opportunities for youth engagement and global education.',
+    'Get in touch with Mayad World Connections to learn more about our programs, partnerships, and opportunities for youth engagement and global education in Kenya and all around the world.',
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_SITE_URL}`),
   openGraph: {
     title: 'Connect with Mayad World Connections',
