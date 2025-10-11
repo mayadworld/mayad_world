@@ -121,7 +121,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
           </motion.div>
 
           {/* Team Cards */}
-          <motion.div variants={fadeInUp} className="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <motion.div variants={fadeInUp} className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {members.map((member, index) => (
               <motion.div key={member.id} variants={fadeInUp} className="group relative">
                 {/* Card */}

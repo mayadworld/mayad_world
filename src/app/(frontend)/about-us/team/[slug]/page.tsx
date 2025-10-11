@@ -85,7 +85,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
     notFound()
   }
 
-  const descriptionParagraphs = team_member.bio.split('\n')
+  const descriptionParagraphs = team_member.bio.split('\n\n')
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 relative overflow-hidden pt-20">
@@ -239,9 +239,9 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                     {descriptionParagraphs.map((paragraph: string, index: number) => (
                       <p
                         key={index}
-                        className={`text-blue-100/90 leading-relaxed ${
+                        className={`text-blue-100/90 leading-relaxed text-lg ${
                           paragraph.trim() === '' ? 'mb-6' : 'mb-4'
-                        } ${index === 0 ? 'text-xl' : 'text-lg'}`}
+                        }`}
                       >
                         {paragraph}
                       </p>
