@@ -3,24 +3,18 @@ import './styles.css'
 import Navbar from '@/components/navigation/Navbar'
 import Footer from '@/components/navigation/Footer'
 import Script from 'next/script'
-import { Oswald, Poppins, Roboto, Host_Grotesk } from 'next/font/google'
-
-const roboto = Poppins({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-montserrat',
-})
-
-const oswald = Oswald({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-montserrat',
-})
+import { Host_Grotesk, Montserrat } from 'next/font/google'
 
 const host_grotesk = Host_Grotesk({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['300', '400', '700', '800'],
   variable: '--font-host-grotesk',
+})
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '700', '800', '900'],
+  variable: '--font-montserrat',
 })
 
 export const metadata = {
@@ -53,7 +47,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="en">
-      <body className={`${host_grotesk.className} bg-[#fffff6] text-[#34373e]`}>
+      <body className={`${montserrat.className} bg-[#fffff6] text-[#34373e]`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7TCK3SVFKH"
           strategy="afterInteractive"

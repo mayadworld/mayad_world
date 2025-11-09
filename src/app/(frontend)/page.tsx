@@ -33,9 +33,9 @@ export default async function HomePage() {
     <div>
       <div className="page">
         {page.layout?.map((block, index) => renderBlock(block, index))}
-        {/* <CTABlock />
+        {/* <CTABlock /> */}
         <EventsSection />
-        <Newsletter /> */}
+        {/* <Newsletter /> */}
       </div>
     </div>
   )
@@ -44,11 +44,11 @@ export default async function HomePage() {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function renderBlock(block: any, index: number) {
   switch (block.blockType) {
-    // case 'hero':
-    //   return <HeroBlock key={index} block={block} />
+    case 'hero':
+      return <HeroBlock key={index} block={block} />
 
-    // case 'home-about':
-    //   return <AboutUsSection key={index} block={block} />
+    case 'home-about':
+      return <AboutUsSection key={index} block={block} />
 
     // case 'services-block':
     //   return <ServicesCarouselSection key={index} block={block} />

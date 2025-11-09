@@ -39,11 +39,11 @@ export default function AboutUsSection({ block }: AboutUsBlockProps) {
   }
 
   return (
-    <section className="py-16 md:py-24 bg-white relative">
+    <section className="px-8 md:px-16 py-0 md:py-24 relative">
       {/* Subtle background accent */}
-      <div className="absolute inset-0 bg-gray-50 h-1/2 bottom-0" />
+      <div className="absolute inset-0 h-1/2 bottom-0" />
 
-      <div className="max-w-screen-xl mx-auto px-6 relative">
+      <div className="max-w-screen-xl mx-auto px-6 relative bg-[#800000] p-8 md:p-12 text-white rounded-3xl">
         <motion.div
           ref={ref}
           initial="hidden"
@@ -55,20 +55,20 @@ export default function AboutUsSection({ block }: AboutUsBlockProps) {
           <div className="space-y-8">
             <div>
               <div className="h-px w-16 bg-[#eab308] mb-6" />
-              <span className="text-sm uppercase tracking-widest text-[#eab308] font-bold">
+              <span className="text-sm uppercase tracking-widest text-[#fecc02] font-bold">
                 About Us
               </span>
-              <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-blue-900 leading-tight">
+              <h2 className="mt-3 text-3xl md:text-4xl font-semibold text-[#fffff6] leading-tight">
                 {heading}
               </h2>
             </div>
 
-            <p className="text-gray-700 leading-relaxed">{description}</p>
+            <p className="text-[#fffff6]/80 leading-relaxed">{description}</p>
 
             <div className="pt-2">
               <Link
                 href="/about-us"
-                className="inline-flex items-center text-sm font-medium text-gray-900 hover:text-blue-800 group transition-colors duration-200"
+                className="inline-flex items-center text-sm font-medium text-[#fffff6] hover:text-[#fecc02] group transition-colors duration-200"
               >
                 <span>Learn more about our expertise</span>
                 <svg
@@ -91,11 +91,8 @@ export default function AboutUsSection({ block }: AboutUsBlockProps) {
 
           {/* Right column - visual element */}
           <div className="relative aspect-square md:aspect-auto md:h-full hidden md:block">
-            <div className="absolute inset-0 border border-[#eab308]" />
-            <div className="absolute top-4 right-4 bottom-4 left-4 bg-gray-100" />
-            <div className="absolute top-8 right-8 bottom-8 left-8 border border-[#eab308]" />
             <div className="absolute inset-0 flex items-center justify-center">
-              <Image src="/logo.png" alt="Mayad logo" width={350} height={350} />
+              <Image src="/darklogo.png" alt="Mayad logo" width={400} height={450} />
             </div>
           </div>
         </motion.div>
