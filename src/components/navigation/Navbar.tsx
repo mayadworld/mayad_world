@@ -3,6 +3,13 @@ import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import { Anton_SC } from 'next/font/google'
+
+const anton = Anton_SC({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-anton',
+})
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -19,7 +26,6 @@ export default function Navbar() {
     { label: 'Events', link: '/events' },
     { label: 'Gallery', link: '/gallery' },
     { label: 'Contact', link: '/contact-us' },
-    { label: 'Registration', link: '/register' },
   ]
 
   useEffect(() => {
@@ -36,10 +42,8 @@ export default function Navbar() {
   }, [])
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'shadow-lg' : ''}`}>
-      <div
-        className={`${scrolled ? 'bg-[#ffffff] border-b-4 border-[#003566]' : 'bg-transparent border-b-2 border-[#eab308]'} transition-all duration-300`}
-      >
+    <nav className="w-full relative md:fixed top-0 left-0 z-50 bg-[#fffff6] px-8 md:px-16">
+      <div className="transition-all duration-300 border-b border-[#fecc02]">
         <div className="max-w-screen-xl px-4 lg:px-8 mx-auto">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -49,32 +53,20 @@ export default function Navbar() {
               >
                 <div>
                   <Image
-                    src="/logolight.png"
+                    src="/darklogo.png"
                     alt="Logo"
                     width={50}
                     height={50}
-                    className={`w-12 h-12 rounded-full object-cover ${scrolled ? 'hidden' : 'flex'}`}
+                    className="w-8 md:w-10 h-8 md:h-10 rounded-full object-cover"
                   />
                 </div>
-                <div>
-                  <Image
-                    src="/logo.png"
-                    alt="Logo"
-                    width={50}
-                    height={50}
-                    className={`w-12 h-12 rounded-full object-cover ${scrolled ? 'flex' : 'hidden'}`}
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span
-                    className={`font-serif text-base md:text-xl font-bold ${scrolled ? 'text-blue-900' : 'text-[#ffffff]'} tracking-wide`}
-                  >
-                    Mayad<span className="text-[#EAB308]"> World</span> Connections
+
+                <div className={`${anton.className} flex flex-col leading-tight`}>
+                  <span className={`text-lg md:text-xl font-semibold text-[#800000] tracking-wide`}>
+                    Mayad World
                   </span>
-                  <span
-                    className={`text-xs ${scrolled ? 'text-[#34373e]/80' : 'text-[#ffffff]/80'} tracking-wider uppercase`}
-                  >
-                    Connecting You to the World
+                  <span className="text-[#800000] tracking-wider uppercase text-xs md:text-sm font-light">
+                    Connections
                   </span>
                 </div>
               </div>
@@ -86,19 +78,23 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={nav.link}
-                  className={`${scrolled ? 'text-[#34373e]' : 'text-[#ffffff]'} font-medium text-sm`}
+                  className="text-[#800000] font-semibold transition-colors duration-200"
                 >
                   {nav.label}
                 </Link>
               ))}
+
+              <Link
+                href="/register"
+                className="bg-[#fecc02] px-4 py-2 rounded-md text-sm font-semibold hover:bg-[#dbb107] transition-colors duration-200 text-white"
+              >
+                Register Now
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="md:hidden">
-              <button
-                onClick={toggleMenu}
-                className={`${scrolled ? 'text-[#34373e]' : 'text-[#ffffff]'}`}
-              >
+              <button onClick={toggleMenu} className="text-[#800000] focus:outline-none">
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
@@ -108,18 +104,25 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#ffffff] py-4 px-6 shadow-lg border-b-2 border-yellow-500">
+        <div className="md:hidden bg-[#fffff6] absolute right-8 w-1/2 py-4 px-6 shadow-lg border-b-2 border-yellow-500">
           <div className="flex flex-col space-y-5">
             {navItems.map((nav, index) => (
               <Link
                 key={index}
                 href={nav.link}
-                className="text-[#34373e] hover:text-[#003566] font-medium transition-colors duration-200 border-b-2 border-blue-900 py-2"
+                className="text-[#800000] font-medium transition-colors duration-200 border-b-2 border-[#800000] py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {nav.label}
               </Link>
             ))}
+
+            <Link
+              href="/register"
+              className="bg-transparent text-center px-4 py-2 rounded-md text-sm border border-[#fecc02] text-[#800000] font-semibold hover:bg-[#800000] hover:border-white hover:text-white transition-colors duration-200"
+            >
+              Register Now
+            </Link>
           </div>
         </div>
       )}

@@ -21,7 +21,7 @@ export default function Footer() {
     { label: 'Registration', link: '/register' },
   ]
   return (
-    <footer className="bg-blue-900 py-16 px-8 md:px-12 lg:px-16">
+    <footer className="bg-[#800000] py-16 px-8 md:px-12 lg:px-16">
       {/* Top accent line */}
       <div className="h-px bg-[#eab308] w-full mb-16"></div>
 

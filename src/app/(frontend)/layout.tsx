@@ -3,6 +3,25 @@ import './styles.css'
 import Navbar from '@/components/navigation/Navbar'
 import Footer from '@/components/navigation/Footer'
 import Script from 'next/script'
+import { Oswald, Poppins, Roboto, Host_Grotesk } from 'next/font/google'
+
+const roboto = Poppins({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-montserrat',
+})
+
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-montserrat',
+})
+
+const host_grotesk = Host_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-host-grotesk',
+})
 
 export const metadata = {
   title: 'Mayad World Connections | Youth Programs & Model UN Conferences in Kenya',
@@ -34,7 +53,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="en">
-      <body>
+      <body className={`${host_grotesk.className} bg-[#fffff6] text-[#34373e]`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7TCK3SVFKH"
           strategy="afterInteractive"
@@ -52,7 +71,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
         <main>
           <Navbar />
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </main>
       </body>
     </html>
