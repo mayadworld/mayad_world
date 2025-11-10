@@ -24,13 +24,13 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Connect With Us</h2>
-          <div className="w-20 h-1 bg-[#eab308] mx-auto"></div>
+          <div className="w-20 h-1 bg-[#fecc02] mx-auto"></div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Social Media Links */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition hover:translate-y-1 hover:shadow-lg">
-            <div className="flex items-center justify-center bg-[#eab308] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
+            <div className="flex items-center justify-center bg-[#fecc02] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
               <Globe className="w-7 h-7 text-[#800000]" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-6">Follow Us</h3>
@@ -43,7 +43,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300"
                 >
-                  <Facebook className="mr-2 text-[#eab308]" size={20} />
+                  <Facebook className="mr-2 text-[#fecc02]" size={20} />
                   <span className="font-medium">Facebook</span>
                 </a>
               )}
@@ -54,7 +54,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300"
                 >
-                  <Twitter className="mr-2 text-[#eab308]" size={20} />
+                  <Twitter className="mr-2 text-[#fecc02]" size={20} />
                   <span className="font-medium">Twitter</span>
                 </a>
               )}
@@ -65,7 +65,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300"
                 >
-                  <Linkedin className="mr-2 text-[#eab308]" size={20} />
+                  <Linkedin className="mr-2 text-[#fecc02]" size={20} />
                   <span className="font-medium">LinkedIn</span>
                 </a>
               )}
@@ -76,7 +76,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300"
                 >
-                  <Instagram className="mr-2 text-[#eab308]" size={20} />
+                  <Instagram className="mr-2 text-[#fecc02]" size={20} />
                   <span className="font-medium">Instagram</span>
                 </a>
               )}
@@ -88,7 +88,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                   className="flex items-center justify-center bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-all duration-300"
                 >
                   <svg
-                    className="w-5 h-5 mr-2 text-[#eab308]"
+                    className="w-5 h-5 mr-2 text-[#fecc02]"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -106,7 +106,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
 
           {/* Phone Numbers */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition hover:translate-y-1 hover:shadow-lg">
-            <div className="flex items-center justify-center bg-[#eab308] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
+            <div className="flex items-center justify-center bg-[#fecc02] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
               <Phone className="w-7 h-7 text-[#800000]" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-6">Call Us</h3>
@@ -119,12 +119,12 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                     className="flex items-center justify-between bg-white/10 hover:bg-white/20 p-4 rounded-lg transition-all duration-300"
                   >
                     <div className="flex items-center">
-                      <Phone size={18} className="text-[#eab308] mr-3" />
+                      <Phone size={18} className="text-[#fecc02] mr-3" />
                       <span className="font-medium">{phone}</span>
                     </div>
                     <a
                       href={`tel:${phone.replace(/\D/g, '')}`}
-                      className="bg-[#eab308] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
+                      className="bg-[#fecc02] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
                     >
                       Call
                     </a>
@@ -133,12 +133,12 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
               ) : (
                 <div className="flex items-center justify-between bg-white/10 p-4 rounded-lg">
                   <div className="flex items-center">
-                    <Phone size={18} className="text-[#eab308] mr-3" />
+                    <Phone size={18} className="text-[#fecc02] mr-3" />
                     <span className="font-medium">(123) 456-7890</span>
                   </div>
                   <a
                     href="tel:1234567890"
-                    className="bg-[#eab308] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
+                    className="bg-[#fecc02] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
                   >
                     Call
                   </a>
@@ -147,7 +147,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
 
               <div className="bg-white/10 p-4 rounded-lg mt-4">
                 <div className="flex items-center">
-                  <Clock size={18} className="text-[#eab308] mr-3" />
+                  <Clock size={18} className="text-[#fecc02] mr-3" />
                   <div>
                     <p className="font-medium">Available Hours</p>
                     <p className="text-sm text-gray-300">Mon-Fri: 9AM - 5PM</p>
@@ -160,7 +160,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
 
           {/* Email Addresses */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition hover:translate-y-1 hover:shadow-lg">
-            <div className="flex items-center justify-center bg-[#eab308] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
+            <div className="flex items-center justify-center bg-[#fecc02] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
               <Mail className="w-7 h-7 text-[#800000]" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-6">Email Us</h3>
@@ -174,7 +174,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                   >
                     <Link href={`mailto:${email}`} className="">
                       <div className="flex items-center">
-                        <Mail size={18} className="text-[#eab308] mr-3" />
+                        <Mail size={18} className="text-[#fecc02] mr-3" />
                         <span className="font-medium">{email}</span>
                       </div>
                     </Link>
@@ -183,12 +183,12 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
               ) : (
                 <div className="flex items-center justify-between bg-white/10 p-4 rounded-lg">
                   <div className="flex items-center">
-                    <Mail size={18} className="text-[#eab308] mr-3" />
+                    <Mail size={18} className="text-[#fecc02] mr-3" />
                     <span className="font-medium">info@company.com</span>
                   </div>
                   <a
                     href="mailto:info@company.com"
-                    className="bg-[#eab308] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
+                    className="bg-[#fecc02] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
                   >
                     Email
                   </a>

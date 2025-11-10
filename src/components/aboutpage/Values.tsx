@@ -15,23 +15,23 @@ export default function ValuesSection({ block }: ValuesBlockProps) {
   const values = block.our_values
 
   return (
-    <section className="py-16 bg-[#800000]">
-      <div className="max-w-6xl mx-auto px-4">
+    <section className="py-16 px-8 md:px-16">
+      <div className="max-w-6xl mx-auto px-4 bg-[#800000] rounded-3xl py-12 shadow-lg">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-3 text-white">Our Core Values</h2>
           <p className="text-white/80 max-w-2xl mx-auto">
             The principles that guide our practice and define our commitment to clients
           </p>
-          <div className="w-20 h-1 mx-auto mt-4 bg-[#eab308]"></div>
+          <div className="w-20 h-1 mx-auto mt-4 bg-[#fecc02]"></div>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-4 gap-6 px-8">
           {values.map((value, index) => (
             <div
               key={index}
               className="bg-white rounded-lg shadow-lg overflow-hidden transform transition-all hover:translate-y-[-5px]"
             >
-              <div className="h-2 w-full" style={{ backgroundColor: getAccentColor(index) }}></div>
+              <div className="h-2 w-full bg-[#fecc02]"></div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-[#800000]">{value.title}</h3>
                 <p className="text-gray-600 text-base">{value.description}</p>
@@ -42,16 +42,4 @@ export default function ValuesSection({ block }: ValuesBlockProps) {
       </div>
     </section>
   )
-
-  function getAccentColor(index: number) {
-    const accentColors = [
-      '#0353A4', // Slightly lighter blue
-      '#023E7D', // Medium blue
-      '#002855', // Darker blue
-      '#001845', // Very dark blue
-      '#0466C8', // Brighter blue
-      '#0077B6', // Ocean blue
-    ]
-    return accentColors[index % accentColors.length]
-  }
 }

@@ -78,7 +78,7 @@ export default async function GalleryPage({ searchParams }: Props) {
                   />
 
                   {/* Sun */}
-                  <circle cx="125" cy="70" r="15" fill="#eab308" />
+                  <circle cx="125" cy="70" r="15" fill="#fecc02" />
 
                   {/* Diagonal slash */}
                   <line
@@ -115,7 +115,7 @@ export default async function GalleryPage({ searchParams }: Props) {
                     key={i}
                     className="h-full w-6"
                     style={{
-                      backgroundColor: i % 3 === 0 ? '#eab308' : 'transparent',
+                      backgroundColor: i % 3 === 0 ? '#fecc02' : 'transparent',
                       opacity: i % 3 === 0 ? 0.3 : 0,
                     }}
                   />

@@ -54,7 +54,7 @@ export default function AboutUsSection({ block }: AboutUsBlockProps) {
           {/* Left column - content */}
           <div className="space-y-8">
             <div>
-              <div className="h-px w-16 bg-[#eab308] mb-6" />
+              <div className="h-px w-16 bg-[#fecc02] mb-6" />
               <span className="text-sm uppercase tracking-widest text-[#fecc02] font-bold">
                 About Us
               </span>

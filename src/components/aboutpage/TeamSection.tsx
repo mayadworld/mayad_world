@@ -79,11 +79,11 @@ export default function TeamSection({ block }: TeamBlockProps) {
   return (
     <section
       ref={ref}
-      className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-blue-950 via-[#800000] to-blue-800"
+      className="py-16 md:py-24 px-8 md:px-16 relative overflow-hidden bg-[#800000]"
     >
       {/* Background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-[#eab308]/10 blur-3xl" />
+        <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-[#fecc02]/10 blur-3xl" />
         <div className="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-blue-400/10 blur-3xl" />
       </div>
 
@@ -91,7 +91,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
       <div className="absolute inset-0 opacity-5">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
-            <circle cx="20" cy="20" r="1" fill="#eab308" />
+            <circle cx="20" cy="20" r="1" fill="#fecc02" />
           </pattern>
           <rect width="100%" height="100%" fill="url(#dots)" />
         </svg>
@@ -106,14 +106,14 @@ export default function TeamSection({ block }: TeamBlockProps) {
         >
           {/* Section Header */}
           <motion.div variants={fadeInUp} className="mb-16 text-center">
-            <div className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#eab308]/20 backdrop-blur-sm border border-[#eab308]/30 text-[#eab308] font-medium text-sm mb-6">
+            <div className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#fecc02]/20 backdrop-blur-sm border border-[#fecc02]/30 text-[#fecc02] font-medium text-sm mb-6">
               <Users className="w-4 h-4" />
               <span>Our Team</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              Meet Our <span className="text-[#eab308]">Leaders</span>
+              Meet Our <span className="text-[#fecc02]">Leaders</span>
             </h2>
-            <div className="w-24 h-1 bg-[#eab308] mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-[#fecc02] mx-auto mb-6"></div>
             <p className="text-blue-100/80 text-lg max-w-2xl mx-auto">
               The passionate educators and changemakers shaping the future of youth through global
               education, leadership, and opportunity.
@@ -146,7 +146,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
 
                     {/* Role badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="bg-[#eab308] text-blue-950 px-3 py-1 rounded-full text-xs font-bold">
+                      <span className="bg-[#fecc02] text-blue-950 px-3 py-1 rounded-full text-xs font-bold">
                         {member.role}
                       </span>
                     </div>
@@ -158,10 +158,10 @@ export default function TeamSection({ block }: TeamBlockProps) {
                       <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
                         {member.name}
                       </h3>
-                      <p className="text-[#eab308] font-medium">{member.role}</p>
+                      <p className="text-[#fecc02] font-medium">{member.role}</p>
                     </div>
 
-                    <div className="h-px bg-gradient-to-r from-[#eab308] via-[#eab308]/50 to-transparent"></div>
+                    <div className="h-px bg-gradient-to-r from-[#fecc02] via-[#fecc02]/50 to-transparent"></div>
 
                     {/* Bio with line clamp */}
                     <p className="text-blue-100/90 text-sm leading-relaxed line-clamp-3">
@@ -171,7 +171,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
                     {/* CTA Button */}
                     <Link
                       href={`/about-us/team/${member.slug}`}
-                      className="inline-flex items-center gap-2 text-[#eab308] font-medium hover:text-[#eab308]/80 transition-colors group/link"
+                      className="inline-flex items-center gap-2 text-[#fecc02] font-medium hover:text-[#fecc02]/80 transition-colors group/link"
                     >
                       View Full Profile
                       <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -181,7 +181,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
 
                 {/* Decorative accent */}
                 <div
-                  className={`absolute -top-3 ${index % 2 === 0 ? '-right-3' : '-left-3'} w-6 h-6 rounded-full bg-[#eab308] opacity-80`}
+                  className={`absolute -top-3 ${index % 2 === 0 ? '-right-3' : '-left-3'} w-6 h-6 rounded-full bg-[#fecc02] opacity-80`}
                 ></div>
               </motion.div>
             ))}
@@ -191,7 +191,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
           <motion.div variants={fadeInUp} className="mt-16 text-center">
             <Link
               href="/contact-us"
-              className="inline-flex items-center gap-2 bg-[#eab308] text-blue-950 px-8 py-4 rounded-full font-bold hover:bg-[#eab308]/90 transition-all duration-300 hover:scale-105 shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#fecc02] text-blue-950 px-8 py-4 rounded-full font-bold hover:bg-[#fecc02]/90 transition-all duration-300 hover:scale-105 shadow-lg"
             >
               Get In Touch
               <ArrowRight className="w-5 h-5" />

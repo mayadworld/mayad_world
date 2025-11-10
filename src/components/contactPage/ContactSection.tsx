@@ -82,7 +82,7 @@ export default function ContactForm({ block }: ContactBlock) {
   if (!formData)
     return (
       <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <div className="bg-[#800000] border border-[#eab308] rounded-lg p-6 sm:p-8 text-center flex flex-col items-center space-y-4 shadow-md max-w-md mx-auto">
+        <div className="bg-[#800000] border border-[#fecc02] rounded-lg p-6 sm:p-8 text-center flex flex-col items-center space-y-4 shadow-md max-w-md mx-auto">
           <LoaderCircle className="w-10 h-10 text-white animate-spin" />
           <h3 className="text-lg sm:text-xl font-semibold text-white">Please Wait!</h3>
           <p className="text-gray-50 text-sm sm:text-base">
@@ -95,8 +95,8 @@ export default function ContactForm({ block }: ContactBlock) {
   if (success)
     return (
       <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <div className="bg-white border-l-4 border-[#eab308] rounded-lg p-8 text-center shadow-lg">
-          <div className="bg-[#eab308] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+        <div className="bg-white border-l-4 border-[#fecc02] rounded-lg p-8 text-center shadow-lg">
+          <div className="bg-[#fecc02] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
             <svg
               className="w-8 h-8 text-[#800000]"
               fill="none"
@@ -130,7 +130,7 @@ export default function ContactForm({ block }: ContactBlock) {
       <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#800000] mb-4">Get In Touch</h2>
-          <div className="w-24 h-1 bg-[#eab308] mx-auto mb-4"></div>
+          <div className="w-24 h-1 bg-[#fecc02] mx-auto mb-4"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Have questions or need assistance? Our team is here to help with your inquiries.
           </p>
@@ -323,7 +323,7 @@ export default function ContactForm({ block }: ContactBlock) {
               <div className="flex justify-between items-center mb-8"></div>
               <div className="mb-8">
                 <h3 className="text-4xl font-bold mb-4">{block.title}</h3>
-                <div className="w-16 h-1 bg-[#eab308] mb-6"></div>
+                <div className="w-16 h-1 bg-[#fecc02] mb-6"></div>
                 <p className="text-gray-100 mb-6 text-lg">{block.description}</p>
               </div>
             </div>

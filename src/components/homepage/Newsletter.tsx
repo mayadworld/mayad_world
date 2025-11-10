@@ -72,7 +72,7 @@ export default function Newsletter() {
                   />
                   <button
                     type="submit"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#eab308] text-[#800000] p-2.5 rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#fecc02] text-[#800000] p-2.5 rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
                     aria-label="Subscribe"
                   >
                     <Send className="h-5 w-5" />
@@ -81,7 +81,7 @@ export default function Newsletter() {
 
                 {/* Success notification */}
                 {subscribed && (
-                  <div className="mt-4 px-4 py-3 bg-[#eab308] bg-opacity-20 rounded-md border-l-4 border-[#eab308] animate-fade-in">
+                  <div className="mt-4 px-4 py-3 bg-[#fecc02] bg-opacity-20 rounded-md border-l-4 border-[#fecc02] animate-fade-in">
                     <p className="text-white text-sm">
                       Thank you for subscribing! We{"'"}ll be in touch soon.
                     </p>

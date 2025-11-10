@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#800000] py-16 px-8 md:px-16">
       {/* Top accent line */}
-      <div className="h-px bg-[#eab308] w-full mb-16"></div>
+      <div className="h-px bg-[#fecc02] w-full mb-16"></div>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         <div className="space-y-8">

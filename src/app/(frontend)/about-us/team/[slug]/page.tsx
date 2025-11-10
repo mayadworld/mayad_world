@@ -91,16 +91,16 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-[#800000] to-blue-800 relative overflow-hidden pt-20">
       {/* Background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-[#eab308]/10 blur-3xl animate-pulse" />
+        <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-[#fecc02]/10 blur-3xl animate-pulse" />
         <div className="absolute bottom-20 left-10 w-80 h-80 rounded-full bg-blue-400/10 blur-3xl animate-pulse delay-1000" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-[#eab308]/5 to-blue-400/5 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-r from-[#fecc02]/5 to-blue-400/5 blur-3xl" />
       </div>
 
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <pattern id="dots" width="60" height="60" patternUnits="userSpaceOnUse">
-            <circle cx="30" cy="30" r="2" fill="#eab308" />
+            <circle cx="30" cy="30" r="2" fill="#fecc02" />
           </pattern>
           <rect width="100%" height="100%" fill="url(#dots)" />
         </svg>
@@ -111,7 +111,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
         <div className="container mx-auto px-4">
           <Link
             href="/about-us"
-            className="inline-flex items-center gap-2 text-blue-100 hover:text-[#eab308] transition-colors group"
+            className="inline-flex items-center gap-2 text-blue-100 hover:text-[#fecc02] transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Go Back
@@ -147,7 +147,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
 
                     {/* Role badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="bg-[#eab308] text-blue-950 px-3 py-1 rounded-full text-sm font-bold">
+                      <span className="bg-[#fecc02] text-blue-950 px-3 py-1 rounded-full text-sm font-bold">
                         {team_member.role}
                       </span>
                     </div>
@@ -164,10 +164,10 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                   <div className="p-6 space-y-4">
                     <div>
                       <h2 className="text-xl font-bold text-white mb-1">{team_member.name}</h2>
-                      <p className="text-[#eab308] font-semibold">{team_member.role}</p>
+                      <p className="text-[#fecc02] font-semibold">{team_member.role}</p>
                     </div>
 
-                    <div className="h-px bg-gradient-to-r from-[#eab308] via-[#eab308]/50 to-transparent"></div>
+                    <div className="h-px bg-gradient-to-r from-[#fecc02] via-[#fecc02]/50 to-transparent"></div>
 
                     {/* Contact Links */}
                     <div className="space-y-3">
@@ -176,8 +176,8 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                           href={`mailto:${team_member.email}`}
                           className="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group"
                         >
-                          <div className="bg-[#eab308]/20 p-2 rounded-lg group-hover:bg-[#eab308]/30 transition-colors">
-                            <Mail className="w-4 h-4 text-[#eab308]" />
+                          <div className="bg-[#fecc02]/20 p-2 rounded-lg group-hover:bg-[#fecc02]/30 transition-colors">
+                            <Mail className="w-4 h-4 text-[#fecc02]" />
                           </div>
                           <span className="text-blue-100 text-sm">{team_member.email}</span>
                         </a>
@@ -188,8 +188,8 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                           href={`tel:${team_member.phone}`}
                           className="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group"
                         >
-                          <div className="bg-[#eab308]/20 p-2 rounded-lg group-hover:bg-[#eab308]/30 transition-colors">
-                            <Phone className="w-4 h-4 text-[#eab308]" />
+                          <div className="bg-[#fecc02]/20 p-2 rounded-lg group-hover:bg-[#fecc02]/30 transition-colors">
+                            <Phone className="w-4 h-4 text-[#fecc02]" />
                           </div>
                           <span className="text-blue-100 text-sm">{team_member.phone}</span>
                         </a>
@@ -197,8 +197,8 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
 
                       {/* Optional: LinkedIn or location */}
                       <div className="flex items-center gap-3 p-3 rounded-lg bg-white/5">
-                        <div className="bg-[#eab308]/20 p-2 rounded-lg">
-                          <MapPin className="w-4 h-4 text-[#eab308]" />
+                        <div className="bg-[#fecc02]/20 p-2 rounded-lg">
+                          <MapPin className="w-4 h-4 text-[#fecc02]" />
                         </div>
                         <span className="text-blue-100 text-sm">Nairobi, Kenya</span>
                       </div>
@@ -208,7 +208,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                     <div className="pt-4">
                       <a
                         href={`tel:${team_member.phone}`}
-                        className="w-full bg-[#eab308] text-blue-950 py-3 px-4 rounded-lg font-bold hover:bg-[#eab308]/90 transition-colors text-center block"
+                        className="w-full bg-[#fecc02] text-blue-950 py-3 px-4 rounded-lg font-bold hover:bg-[#fecc02]/90 transition-colors text-center block"
                       >
                         Get In Touch
                       </a>
@@ -224,14 +224,14 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
               <div className="mb-8">
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 lg:p-12">
                   <div className="mb-6">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#eab308]/20 text-[#eab308] font-medium text-sm mb-4">
-                      <div className="w-2 h-2 rounded-full bg-[#eab308]"></div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#fecc02]/20 text-[#fecc02] font-medium text-sm mb-4">
+                      <div className="w-2 h-2 rounded-full bg-[#fecc02]"></div>
                       Leadership Profile
                     </div>
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                      About <span className="text-[#eab308]">{team_member.name}</span>
+                      About <span className="text-[#fecc02]">{team_member.name}</span>
                     </h2>
-                    <div className="w-24 h-1 bg-[#eab308] mb-6"></div>
+                    <div className="w-24 h-1 bg-[#fecc02] mb-6"></div>
                   </div>
 
                   {/* Bio Content */}
@@ -255,8 +255,8 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                 {/* Contact Card */}
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-[#eab308]/20 flex items-center justify-center">
-                      <Mail className="w-4 h-4 text-[#eab308]" />
+                    <div className="w-10 h-10 rounded-full bg-[#fecc02]/20 flex items-center justify-center">
+                      <Mail className="w-4 h-4 text-[#fecc02]" />
                     </div>
                     <h3 className="text-lg font-bold text-white">Let{"'"}s Connect</h3>
                   </div>
@@ -266,7 +266,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                   </p>
                   <a
                     href={`mailto:${team_member.email}`}
-                    className="inline-flex items-center gap-2 text-[#eab308] font-medium hover:text-[#eab308]/80 transition-colors"
+                    className="inline-flex items-center gap-2 text-[#fecc02] font-medium hover:text-[#fecc02]/80 transition-colors"
                   >
                     Send Message
                     <ArrowLeft className="w-4 h-4 rotate-180" />
