@@ -11,6 +11,13 @@ import {
   ChevronRight,
 } from 'lucide-react'
 import Image from 'next/image'
+import { Anton_SC } from 'next/font/google'
+
+const anton = Anton_SC({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-anton',
+})
 
 export default function Footer() {
   const navItems = [
@@ -21,7 +28,7 @@ export default function Footer() {
     { label: 'Registration', link: '/register' },
   ]
   return (
-    <footer className="bg-[#800000] py-16 px-8 md:px-12 lg:px-16">
+    <footer className="bg-[#800000] py-16 px-8 md:px-16">
       {/* Top accent line */}
       <div className="h-px bg-[#eab308] w-full mb-16"></div>
 
@@ -30,7 +37,7 @@ export default function Footer() {
           <div className="flex items-center gap-2 transition-all duration-300">
             <div>
               <Image
-                src="/logolight.png"
+                src="/whitelogo.png"
                 alt="Logo"
                 width={50}
                 height={50}
@@ -38,11 +45,13 @@ export default function Footer() {
               />
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-xl font-bold text-[#ffffff] tracking-wide">
-                Mayad<span className="text-[#EAB308]"> World</span>
+              <span
+                className={`${anton.className} flex flex-col leading-tight text-[#fffff6] text-xl`}
+              >
+                Mayad World Connections
               </span>
               <span className="text-white tracking-wider uppercase text-xs">
-                Connecting You to the World
+                Incubating Global Citizens
               </span>
             </div>
           </div>
@@ -54,16 +63,16 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-4">
-            <a href="#" className="text-white/80 hover:text-[#74b1dd] transition-colors">
+            <a href="#" className="text-white/80 hover:text-[#fecc02] transition-colors">
               <Facebook size={18} />
             </a>
-            <a href="#" className="text-white/80 hover:text-[#74b1dd] transition-colors">
+            <a href="#" className="text-white/80 hover:text-[#fecc02] transition-colors">
               <Twitter size={18} />
             </a>
-            <a href="#" className="text-white/80 hover:text-[#74b1dd] transition-colors">
+            <a href="#" className="text-white/80 hover:text-[#fecc02] transition-colors">
               <Instagram size={18} />
             </a>
-            <a href="#" className="text-white/80 hover:text-[#74b1dd] transition-colors">
+            <a href="#" className="text-white/80 hover:text-[#fecc02] transition-colors">
               <Linkedin size={18} />
             </a>
           </div>
@@ -78,7 +87,7 @@ export default function Footer() {
               <li key={index}>
                 <Link
                   href={nav.link}
-                  className="text-white/70 hover:text-[#74b1dd] transition-colors text-sm flex items-center group"
+                  className="text-white/70 hover:text-[#fecc02] transition-colors text-sm flex items-center group"
                 >
                   <ChevronRight
                     size={14}
@@ -97,7 +106,7 @@ export default function Footer() {
 
           <div className="space-y-6">
             <div className="flex items-start gap-3">
-              <MapPin size={18} className="text-[#74b1dd] flex-shrink-0 mt-1" />
+              <MapPin size={18} className="text-[#fecc02] flex-shrink-0 mt-1" />
               <p className="text-white/70 text-sm">
                 1st Floor, Office 1, Gardens Arcade
                 <br />
@@ -106,7 +115,7 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Mail size={18} className="text-[#74b1dd] flex-shrink-0" />
+              <Mail size={18} className="text-[#fecc02] flex-shrink-0" />
               <a
                 href="mailto:info@mayadworld.com"
                 className="text-white/70 hover:text-white text-sm transition-colors"
@@ -116,7 +125,7 @@ export default function Footer() {
             </div>
 
             <div className="flex items-center gap-3">
-              <Phone size={18} className="text-[#74b1dd] flex-shrink-0" />
+              <Phone size={18} className="text-[#fecc02] flex-shrink-0" />
               <a
                 href="tel:+254721537292"
                 className="text-white/70 hover:text-white text-sm transition-colors"
@@ -136,7 +145,7 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-8">
-            <p className="text-white/50 text-xs">Connecting You To The World</p>
+            <p className="text-white/50 text-xs">Incubating Global Citizens</p>
           </div>
         </div>
       </div>

@@ -82,7 +82,7 @@ export default function ContactForm({ block }: ContactBlock) {
   if (!formData)
     return (
       <section className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-        <div className="bg-blue-900 border border-[#eab308] rounded-lg p-6 sm:p-8 text-center flex flex-col items-center space-y-4 shadow-md max-w-md mx-auto">
+        <div className="bg-[#800000] border border-[#eab308] rounded-lg p-6 sm:p-8 text-center flex flex-col items-center space-y-4 shadow-md max-w-md mx-auto">
           <LoaderCircle className="w-10 h-10 text-white animate-spin" />
           <h3 className="text-lg sm:text-xl font-semibold text-white">Please Wait!</h3>
           <p className="text-gray-50 text-sm sm:text-base">
@@ -98,7 +98,7 @@ export default function ContactForm({ block }: ContactBlock) {
         <div className="bg-white border-l-4 border-[#eab308] rounded-lg p-8 text-center shadow-lg">
           <div className="bg-[#eab308] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
             <svg
-              className="w-8 h-8 text-blue-900"
+              className="w-8 h-8 text-[#800000]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -111,13 +111,13 @@ export default function ContactForm({ block }: ContactBlock) {
               ></path>
             </svg>
           </div>
-          <h3 className="text-2xl font-bold text-blue-900 mb-3">Thank You!</h3>
+          <h3 className="text-2xl font-bold text-[#800000] mb-3">Thank You!</h3>
           <p className="text-gray-600 mb-4">
             Your message has been received. We{"'"}ll be in touch shortly.
           </p>
           <button
             onClick={() => setSuccess(false)}
-            className="inline-flex items-center px-4 py-2 bg-blue-900 text-white rounded-md hover:bg-[#0f4579] transition duration-150"
+            className="inline-flex items-center px-4 py-2 bg-[#800000] text-white rounded-md hover:bg-[#0f4579] transition duration-150"
           >
             Send Another Message
           </button>
@@ -129,7 +129,7 @@ export default function ContactForm({ block }: ContactBlock) {
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4">Get In Touch</h2>
+          <h2 className="text-3xl font-bold text-[#800000] mb-4">Get In Touch</h2>
           <div className="w-24 h-1 bg-[#eab308] mx-auto mb-4"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Have questions or need assistance? Our team is here to help with your inquiries.
@@ -140,7 +140,7 @@ export default function ContactForm({ block }: ContactBlock) {
           <div className="grid md:grid-cols-2">
             {/* Left Column - Form */}
             <div className="p-6 sm:p-10">
-              <h3 className="text-2xl font-semibold text-blue-900 mb-6">Send Us a Message</h3>
+              <h3 className="text-2xl font-semibold text-[#800000] mb-6">Send Us a Message</h3>
 
               <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {formData.fields.map(
@@ -173,7 +173,7 @@ export default function ContactForm({ block }: ContactBlock) {
                                 name={field.name}
                                 type="text"
                                 required={field.required}
-                                className="block w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-900 focus:border-transparent transition duration-150"
+                                className="block w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#800000] focus:border-transparent transition duration-150"
                                 placeholder={`Your ${field.label}`}
                               />
                             </div>
@@ -201,7 +201,7 @@ export default function ContactForm({ block }: ContactBlock) {
                                 name={field.name}
                                 type="email"
                                 required={field.required}
-                                className="block w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-900 focus:border-transparent transition duration-150"
+                                className="block w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#800000] focus:border-transparent transition duration-150"
                                 placeholder="your@email.com"
                               />
                             </div>
@@ -225,7 +225,7 @@ export default function ContactForm({ block }: ContactBlock) {
                               name={field.name}
                               required={field.required}
                               rows={4}
-                              className="block w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-900 focus:border-transparent transition duration-150"
+                              className="block w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#800000] focus:border-transparent transition duration-150"
                               placeholder="How can we help you?"
                             />
                             {errors[field.name] && (
@@ -252,7 +252,7 @@ export default function ContactForm({ block }: ContactBlock) {
                                 name={field.name}
                                 type="tel"
                                 required={field.required}
-                                className="block w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-900 focus:border-transparent transition duration-150"
+                                className="block w-full pl-10 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#800000] focus:border-transparent transition duration-150"
                                 placeholder="Your phone number"
                               />
                             </div>
@@ -278,7 +278,7 @@ export default function ContactForm({ block }: ContactBlock) {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full px-6 py-3 bg-blue-900 hover:bg-[#0c4075] text-white font-medium rounded-md shadow-sm transition duration-150 flex items-center justify-center"
+                    className="w-full px-6 py-3 bg-[#800000] hover:bg-[#0c4075] text-white font-medium rounded-md shadow-sm transition duration-150 flex items-center justify-center"
                   >
                     {submitting ? (
                       <>
@@ -319,7 +319,7 @@ export default function ContactForm({ block }: ContactBlock) {
             </div>
 
             {/* Right Column - Content */}
-            <div className="bg-blue-900 text-white p-6 sm:p-10 flex flex-col justify-center items-center gap-8">
+            <div className="bg-[#800000] text-white p-6 sm:p-10 flex flex-col justify-center items-center gap-8">
               <div className="flex justify-between items-center mb-8"></div>
               <div className="mb-8">
                 <h3 className="text-4xl font-bold mb-4">{block.title}</h3>

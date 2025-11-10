@@ -72,7 +72,7 @@ export default function PaginationComponent({ totalPages }: PaginationComponentP
 
   return (
     <nav className="flex justify-center py-8" aria-label="Pagination">
-      <div className="flex items-center space-x-1 md:space-x-2 rounded-lg bg-white p-1 shadow-md border border-blue-900/10">
+      <div className="flex items-center space-x-1 md:space-x-2 rounded-lg bg-white p-1 shadow-md border border-[#800000]/10">
         {/* Previous button */}
         <Link
           href={createPageURL(currentPage - 1)}
@@ -80,8 +80,8 @@ export default function PaginationComponent({ totalPages }: PaginationComponentP
             flex items-center justify-center min-w-10 h-10 px-2 rounded-lg transition-all duration-200
             ${
               currentPage === 1
-                ? 'text-blue-900/30 cursor-not-allowed'
-                : 'text-blue-900 hover:bg-blue-900/5 hover:text-blue-900'
+                ? 'text-[#800000]/30 cursor-not-allowed'
+                : 'text-[#800000] hover:bg-[#800000]/5 hover:text-[#800000]'
             }
           `}
           aria-disabled={currentPage === 1}
@@ -100,7 +100,7 @@ export default function PaginationComponent({ totalPages }: PaginationComponentP
               return (
                 <span
                   key={`ellipsis-${index}`}
-                  className="w-10 h-10 flex items-center justify-center text-blue-900"
+                  className="w-10 h-10 flex items-center justify-center text-[#800000]"
                 >
                   &#8230;
                 </span>
@@ -115,8 +115,8 @@ export default function PaginationComponent({ totalPages }: PaginationComponentP
                   w-10 h-10 flex items-center justify-center rounded-lg font-medium transition-all duration-200
                   ${
                     currentPage === pageNumber
-                      ? 'bg-blue-900 text-white shadow-sm'
-                      : 'text-blue-900 hover:bg-yellow-500 hover:text-blue-900'
+                      ? 'bg-[#800000] text-white shadow-sm'
+                      : 'text-[#800000] hover:bg-[#fecc02] hover:text-[#800000]'
                   }
                 `}
                 aria-current={currentPage === pageNumber ? 'page' : undefined}
@@ -134,8 +134,8 @@ export default function PaginationComponent({ totalPages }: PaginationComponentP
             flex items-center justify-center min-w-10 h-10 px-2 rounded-lg transition-all duration-200
             ${
               currentPage >= totalPages
-                ? 'text-blue-900/30 cursor-not-allowed'
-                : 'text-blue-900 hover:bg-blue-900/5 hover:text-blue-900'
+                ? 'text-[#800000]/30 cursor-not-allowed'
+                : 'text-[#800000] hover:bg-[#800000]/5 hover:text-[#800000]'
             }
           `}
           aria-disabled={currentPage >= totalPages}

@@ -15,7 +15,7 @@ export default function ValuesSection({ block }: ValuesBlockProps) {
   const values = block.our_values
 
   return (
-    <section className="py-16 bg-blue-900">
+    <section className="py-16 bg-[#800000]">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-3 text-white">Our Core Values</h2>
@@ -33,7 +33,7 @@ export default function ValuesSection({ block }: ValuesBlockProps) {
             >
               <div className="h-2 w-full" style={{ backgroundColor: getAccentColor(index) }}></div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-blue-900">{value.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-[#800000]">{value.title}</h3>
                 <p className="text-gray-600 text-base">{value.description}</p>
               </div>
             </div>

@@ -20,7 +20,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
   const socialLinks = block.socials[0] || {}
 
   return (
-    <section className="py-16 bg-blue-900 text-white">
+    <section className="py-16 bg-[#800000] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold mb-4">Connect With Us</h2>
@@ -31,7 +31,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
           {/* Social Media Links */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition hover:translate-y-1 hover:shadow-lg">
             <div className="flex items-center justify-center bg-[#eab308] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
-              <Globe className="w-7 h-7 text-blue-900" />
+              <Globe className="w-7 h-7 text-[#800000]" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-6">Follow Us</h3>
 
@@ -107,7 +107,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
           {/* Phone Numbers */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition hover:translate-y-1 hover:shadow-lg">
             <div className="flex items-center justify-center bg-[#eab308] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
-              <Phone className="w-7 h-7 text-blue-900" />
+              <Phone className="w-7 h-7 text-[#800000]" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-6">Call Us</h3>
 
@@ -124,7 +124,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                     </div>
                     <a
                       href={`tel:${phone.replace(/\D/g, '')}`}
-                      className="bg-[#eab308] text-blue-900 font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
+                      className="bg-[#eab308] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
                     >
                       Call
                     </a>
@@ -138,7 +138,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                   </div>
                   <a
                     href="tel:1234567890"
-                    className="bg-[#eab308] text-blue-900 font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
+                    className="bg-[#eab308] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
                   >
                     Call
                   </a>
@@ -161,7 +161,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
           {/* Email Addresses */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition hover:translate-y-1 hover:shadow-lg">
             <div className="flex items-center justify-center bg-[#eab308] w-14 h-14 rounded-lg -mt-10 mb-4 mx-auto shadow-md">
-              <Mail className="w-7 h-7 text-blue-900" />
+              <Mail className="w-7 h-7 text-[#800000]" />
             </div>
             <h3 className="text-xl font-semibold text-center mb-6">Email Us</h3>
 
@@ -188,7 +188,7 @@ export default function ContactSocials({ block }: ContactSocialsProps) {
                   </div>
                   <a
                     href="mailto:info@company.com"
-                    className="bg-[#eab308] text-blue-900 font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
+                    className="bg-[#eab308] text-[#800000] font-medium px-3 py-1 rounded-md hover:bg-opacity-90 transition-opacity duration-300"
                   >
                     Email
                   </a>

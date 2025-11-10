@@ -54,7 +54,7 @@ export default function EventsHero() {
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
           <Link
             href="#events"
-            className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-medium rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-yellow-400/20 transition-all"
+            className="px-6 py-3 bg-yellow-400 hover:bg-[#fecc02] text-[#800000] font-medium rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-yellow-400/20 transition-all"
           >
             Browse Events
             <ArrowRight size={18} />

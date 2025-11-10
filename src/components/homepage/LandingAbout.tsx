@@ -92,7 +92,7 @@ export default function AboutUsSection({ block }: AboutUsBlockProps) {
           {/* Right column - visual element */}
           <div className="relative aspect-square md:aspect-auto md:h-full hidden md:block">
             <div className="absolute inset-0 flex items-center justify-center">
-              <Image src="/darklogo.png" alt="Mayad logo" width={400} height={450} />
+              <Image src="/whitelogo.png" alt="Mayad logo" width={350} height={350} />
             </div>
           </div>
         </motion.div>

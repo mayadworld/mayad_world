@@ -11,9 +11,9 @@ export default async function EventsList() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white" id="events">
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-blue-900/5 -skew-y-6"></div>
-      <div className="absolute top-40 right-0 w-72 h-72 rounded-full bg-amber-400/10 blur-3xl"></div>
-      <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-blue-900/5 blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-full h-32 bg-[#800000]/5 -skew-y-6"></div>
+      <div className="absolute top-40 right-0 w-72 h-72 rounded-full bg-[#fecc02]/10 blur-3xl"></div>
+      <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-[#800000]/5 blur-3xl"></div>
 
       <section className="py-20 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +22,7 @@ export default async function EventsList() {
             <p className="text-gray-700 text-lg">
               Don{"'"}t miss our exciting events and conferences happening throughout the year.
             </p>
-            <div className="w-24 h-1 bg-amber-400 mx-auto mt-6"></div>
+            <div className="w-24 h-1 bg-[#fecc02] mx-auto mt-6"></div>
           </div>
 
           {/* Featured Event (First Event) */}
@@ -30,7 +30,7 @@ export default async function EventsList() {
             <div className="mb-16">
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden lg:flex">
                 <div className="relative lg:w-1/2">
-                  <div className="absolute inset-0 bg-blue-900 mix-blend-multiply opacity-10"></div>
+                  <div className="absolute inset-0 bg-[#800000] mix-blend-multiply opacity-10"></div>
                   <Image
                     src={
                       typeof events[0].thumbnail === 'object' && 'url' in events[0].thumbnail
@@ -42,17 +42,17 @@ export default async function EventsList() {
                     height={500}
                     className="w-full h-full object-cover aspect-video"
                   />
-                  <div className="absolute top-4 left-4 bg-blue-900 text-white rounded-lg p-3 shadow-lg">
+                  <div className="absolute top-4 left-4 bg-[#800000] text-white rounded-lg p-3 shadow-lg">
                     <div className="text-center"></div>
                   </div>
                 </div>
                 <div className="p-8 lg:p-12 lg:w-1/2 flex flex-col justify-center">
                   <div className="inline-flex items-center mb-4">
-                    <span className="px-3 py-1 bg-amber-100 text-blue-900 text-xs font-medium rounded-full">
+                    <span className="px-3 py-1 bg-amber-100 text-[#800000] text-xs font-medium rounded-full">
                       LATEST EVENT
                     </span>
                   </div>
-                  <h3 className="text-2xl lg:text-3xl font-bold text-blue-900 mb-4">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-[#800000] mb-4">
                     {events[0].title}
                   </h3>
 
@@ -75,7 +75,7 @@ export default async function EventsList() {
                         href={events[0].purchaseLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center px-6 py-3 bg-blue-900 hover:bg-blue-800 text-white font-medium rounded-lg transition shadow-md"
+                        className="flex items-center justify-center px-6 py-3 bg-[#800000] hover:bg-blue-800 text-white font-medium rounded-lg transition shadow-md"
                       >
                         Register Now
                         <ExternalLink size={16} className="ml-2" />
@@ -96,7 +96,7 @@ export default async function EventsList() {
                   className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col"
                 >
                   <div className="relative">
-                    <div className="absolute inset-0 bg-blue-900/20 group-hover:bg-blue-900/10 transition-colors"></div>
+                    <div className="absolute inset-0 bg-[#800000]/20 group-hover:bg-[#800000]/10 transition-colors"></div>
                     <Image
                       src={
                         typeof event.thumbnail === 'object' && 'url' in event.thumbnail
@@ -111,7 +111,7 @@ export default async function EventsList() {
                   </div>
 
                   <div className="p-6 flex-grow flex flex-col">
-                    <h3 className="text-xl font-bold text-blue-900 mb-3 group-hover:text-blue-800 transition-colors">
+                    <h3 className="text-xl font-bold text-[#800000] mb-3 group-hover:text-blue-800 transition-colors">
                       {event.title}
                     </h3>
                     <p className="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
@@ -135,7 +135,7 @@ export default async function EventsList() {
                           href={event.purchaseLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center justify-center px-3 py-1 bg-amber-400 hover:bg-amber-500 text-blue-900 text-sm font-medium rounded-md transition shadow-sm"
+                          className="flex items-center justify-center px-3 py-1 bg-[#fecc02] hover:bg-amber-500 text-[#800000] text-sm font-medium rounded-md transition shadow-sm"
                         >
                           Register
                         </Link>

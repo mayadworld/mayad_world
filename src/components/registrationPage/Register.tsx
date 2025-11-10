@@ -162,7 +162,7 @@ export default function RegistrationForm() {
     return (
       <section className="max-w-6xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <motion.div
-          className="bg-gradient-to-br from-blue-950 to-blue-900 rounded-lg p-6 sm:p-8 text-center flex flex-col items-center space-y-4 shadow-lg max-w-md mx-auto border border-blue-800"
+          className="bg-gradient-to-br from-blue-950 to-[#800000] rounded-lg p-6 sm:p-8 text-center flex flex-col items-center space-y-4 shadow-lg max-w-md mx-auto border border-blue-800"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -180,19 +180,19 @@ export default function RegistrationForm() {
     return (
       <section className="max-w-6xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <motion.div
-          className="bg-gradient-to-br from-blue-950 to-blue-900 rounded-lg p-8 text-center shadow-lg border border-blue-800 max-w-md"
+          className="bg-gradient-to-br from-blue-950 to-[#800000] rounded-lg p-8 text-center shadow-lg border border-blue-800 max-w-md"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
           <div className="bg-yellow-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-md shadow-yellow-400/20">
-            <CheckCircle className="w-8 h-8 text-blue-900" />
+            <CheckCircle className="w-8 h-8 text-[#800000]" />
           </div>
           <h3 className="text-2xl font-bold text-white mb-3">Registration Complete!</h3>
           <p className="text-blue-100 mb-6">Thank you for registering!</p>
           <button
             onClick={() => setSuccess(false)}
-            className="inline-flex items-center px-6 py-3 bg-yellow-400 text-blue-900 font-medium rounded-lg hover:bg-yellow-500 transition duration-150 shadow-md"
+            className="inline-flex items-center px-6 py-3 bg-yellow-400 text-[#800000] font-medium rounded-lg hover:bg-[#fecc02] transition duration-150 shadow-md"
           >
             Register for Another Event
           </button>
@@ -204,7 +204,7 @@ export default function RegistrationForm() {
     <section className="py-8 sm:py-16 bg-blue-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-blue-900 mb-4">
+          <h2 className="text-3xl font-bold text-[#800000] mb-4">
             Global Youth Programs Registration
           </h2>
           <p className="text-blue-700 max-w-2xl mx-auto">
@@ -219,8 +219,8 @@ export default function RegistrationForm() {
                 onClick={() => setEventType(type.slug)}
                 className={`flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   eventType === type.slug
-                    ? 'bg-blue-900 text-white shadow-md'
-                    : 'bg-white text-blue-900 border border-blue-200 hover:bg-blue-100'
+                    ? 'bg-[#800000] text-white shadow-md'
+                    : 'bg-white text-[#800000] border border-blue-200 hover:bg-blue-100'
                 }`}
               >
                 {type.title}
@@ -239,7 +239,7 @@ export default function RegistrationForm() {
         >
           <div className="grid md:grid-cols-5">
             {/* Left Column - Decorative */}
-            <div className="hidden md:block md:col-span-2 bg-gradient-to-br from-blue-950 to-blue-900 p-8 relative overflow-hidden">
+            <div className="hidden md:block md:col-span-2 bg-gradient-to-br from-blue-950 to-[#800000] p-8 relative overflow-hidden">
               <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-yellow-400 opacity-20 blur-3xl"></div>
               <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-blue-400 opacity-20 blur-3xl"></div>
 
@@ -278,13 +278,13 @@ export default function RegistrationForm() {
 
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg shadow-yellow-400/20">
-                      <CheckCircle size={16} className="text-blue-900" />
+                      <CheckCircle size={16} className="text-[#800000]" />
                     </div>
                     <p className="text-sm text-blue-100">Expert-led programs</p>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg shadow-yellow-400/20">
-                      <CheckCircle size={16} className="text-blue-900" />
+                      <CheckCircle size={16} className="text-[#800000]" />
                     </div>
                     <p className="text-sm text-blue-100">Global network of participants</p>
                   </div>
@@ -295,19 +295,22 @@ export default function RegistrationForm() {
             {/* Right Column - Form */}
             <div className="p-6 sm:p-8 md:col-span-3">
               <div className="md:hidden mb-6">
-                <h3 className="text-2xl font-bold text-blue-900 mb-2">{getEventTitle()}</h3>
+                <h3 className="text-2xl font-bold text-[#800000] mb-2">{getEventTitle()}</h3>
                 <p className="text-blue-600 text-sm mb-6">{getEventDescription()}</p>
 
                 <div className="bg-blue-50 rounded-lg p-4 mb-6">
-                  <h4 className="font-medium text-blue-900 mb-2">Upcoming Events</h4>
+                  <h4 className="font-medium text-[#800000] mb-2">Upcoming Events</h4>
                   <ul className="space-y-3 text-sm">
                     {events.map((event) => {
                       return (
                         <li key={eventType} className="flex items-start">
-                          <Calendar size={16} className="text-blue-900 mr-2 mt-0.5 flex-shrink-0" />
+                          <Calendar
+                            size={16}
+                            className="text-[#800000] mr-2 mt-0.5 flex-shrink-0"
+                          />
                           <div>
                             <p className="text-yellow-400">{event.title}</p>
-                            <p className="text-blue-900">{event.date}</p>
+                            <p className="text-[#800000]">{event.date}</p>
                           </div>
                         </li>
                       )
@@ -401,7 +404,7 @@ export default function RegistrationForm() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-blue-900 to-blue-800 hover:from-blue-800 hover:to-blue-700 text-white font-medium rounded-lg shadow transition duration-150 flex items-center justify-center"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-[#800000] to-blue-800 hover:from-blue-800 hover:to-blue-700 text-white font-medium rounded-lg shadow transition duration-150 flex items-center justify-center"
                   >
                     {submitting ? (
                       <>

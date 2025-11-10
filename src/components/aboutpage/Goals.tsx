@@ -21,7 +21,7 @@ export default function GoalsSection({ block }: GoalsBlockProps) {
         {/* Section Header */}
         <div className="mb-16 max-w-xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4 text-neutral-800">Our Purpose</h2>
-          <div className="h-1 w-12 bg-blue-900 mx-auto"></div>
+          <div className="h-1 w-12 bg-[#800000] mx-auto"></div>
         </div>
 
         {/* Content Container */}
@@ -52,7 +52,7 @@ export default function GoalsSection({ block }: GoalsBlockProps) {
         </div>
 
         {/* Bottom CTA - Minimalist Style */}
-        <div className="mt-16 bg-gradient-to-r from-blue-900 to-yellow-500/50 rounded-lg overflow-hidden shadow-md">
+        <div className="mt-16 bg-gradient-to-r from-[#800000] to-[#fecc02]/50 rounded-lg overflow-hidden shadow-md">
           <div className="p-8 md:p-10 text-center md:text-left flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0">
               <h3 className="text-xl font-medium text-white mb-2">

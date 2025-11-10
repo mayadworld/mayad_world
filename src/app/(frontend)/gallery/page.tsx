@@ -93,21 +93,21 @@ export default async function GalleryPage({ searchParams }: Props) {
                 </svg>
 
                 {/* Decorative elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-yellow-500/20 rounded-full"></div>
-                <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-blue-900/20 rounded-full"></div>
+                <div className="absolute -top-4 -right-4 w-16 h-16 bg-[#fecc02]/20 rounded-full"></div>
+                <div className="absolute -bottom-4 -left-4 w-10 h-10 bg-[#800000]/20 rounded-full"></div>
               </div>
 
-              <h2 className="text-2xl font-bold text-blue-900 mb-3">No Images Found</h2>
+              <h2 className="text-2xl font-bold text-[#800000] mb-3">No Images Found</h2>
 
-              <div className="w-16 h-1 bg-yellow-500 rounded-full mb-4"></div>
+              <div className="w-16 h-1 bg-[#fecc02] rounded-full mb-4"></div>
 
-              <p className="text-blue-900/70 text-center mb-6">
+              <p className="text-[#800000]/70 text-center mb-6">
                 It looks like there are no images available in the gallery at the moment.
               </p>
             </div>
 
             {/* Decorative pattern at bottom */}
-            <div className="h-8 bg-gradient-to-r from-blue-900 to-blue-800 flex overflow-hidden">
+            <div className="h-8 bg-gradient-to-r from-[#800000] to-blue-800 flex overflow-hidden">
               {Array(12)
                 .fill(0)
                 .map((_, i) => (

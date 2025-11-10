@@ -47,35 +47,39 @@ export default function ServicesSection({ block }: ServicesBlockProps) {
   return (
     <section
       ref={ref}
-      className="py-24 bg-gradient-to-br from-blue-900 to-blue-950 relative overflow-hidden"
+      className="py-24 relative overflow-hidden px-8 md:px-16 bg-gradient-to-b from-[#fffff6] to-[#fffff6]/50"
     >
-      {/* Abstract accent shapes */}
-      <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-yellow-500/10 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-yellow-500/5 blur-3xl"></div>
+      {/* Decorative elements */}
+      <div className="absolute top-20 right-10 w-72 h-72 rounded-full bg-[#fecc02]/8 blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-96 h-96 rounded-full bg-[#800000]/5 blur-3xl"></div>
 
       <div className="xl:container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          {/* Accent line */}
-          <div className="flex justify-center mb-6">
-            <div className="h-1 w-16 bg-yellow-500 rounded-full"></div>
+        <div className="text-center mb-20">
+          {/* Accent line with dots */}
+          <div className="flex justify-center items-center gap-2 mb-6">
+            <div className="w-2 h-2 rounded-full bg-[#fecc02]"></div>
+            <div className="h-0.5 w-16 bg-gradient-to-r from-[#fecc02] to-[#800000]"></div>
+            <div className="w-2 h-2 rounded-full bg-[#800000]"></div>
           </div>
 
           {/* Badge */}
-          <span className="inline-block px-4 py-1 rounded-full bg-yellow-500/20 text-yellow-500 font-medium text-sm tracking-wide mb-4">
-            What You Need
+          <span className="inline-block px-5 py-2 rounded-full bg-[#fecc02]/15 text-[#800000] font-semibold text-sm tracking-wide mb-6 border border-[#fecc02]/30">
+            WHAT WE OFFER
           </span>
 
           {/* Main heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">{heading}</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#800000] mb-6 tracking-tight">
+            {heading}
+          </h2>
 
           {/* Supporting text */}
-          <p className="max-w-2xl mx-auto text-white/70">
+          <p className="max-w-3xl mx-auto text-lg text-[#800000]/70 leading-relaxed">
             Explore the initiatives and programs we offer to empower future diplomats and leaders
           </p>
         </div>
 
-        {/* Service cards grid - responsive */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {/* Service cards grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
@@ -83,26 +87,42 @@ export default function ServicesSection({ block }: ServicesBlockProps) {
               initial="hidden"
               animate={controls}
               variants={fadeInUp}
-              className="group relative overflow-hidden"
+              className="group relative"
             >
-              {/* Hexagon shape background effect */}
-              <div className="absolute inset-0 bg-blue-800 transform -skew-x-6 rounded-lg -z-10"></div>
+              {/* Card */}
+              <div className="relative h-full bg-white rounded-2xl border-2 border-[#800000]/10 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[#fecc02]/20">
+                {/* Card content */}
+                <div className="p-8 flex flex-col h-full">
+                  {/* Icon container */}
+                  <div className="mb-6">
+                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-[#800000] to-[#800000]/80 shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-xl group-hover:shadow-[#800000]/30">
+                      <div className="w-8 h-8 rounded-lg bg-[#fecc02]"></div>
+                    </div>
+                  </div>
 
-              {/* Card content */}
-              <div className="relative p-8 bg-gradient-to-br from-blue-800/80 to-blue-900/80 backdrop-blur-sm rounded-lg border border-blue-700/50 h-full flex flex-col transition-all duration-300 group-hover:shadow-lg group-hover:shadow-yellow-500/10 group-hover:border-yellow-500/30">
-                {/* Icon with animation */}
-                <div className="mb-6 transition-all duration-300 group-hover:scale-110 origin-left">
-                  <div className="inline-flex items-center justify-center p-3 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg text-blue-900 shadow-lg shadow-yellow-500/20"></div>
+                  {/* Service number badge */}
+                  <div className="absolute top-6 right-6 w-10 h-10 rounded-full bg-[#fecc02]/20 flex items-center justify-center">
+                    <span className="text-sm font-bold text-[#800000]">
+                      {String(index + 1).padStart(2, '0')}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="text-2xl font-bold text-[#800000] mb-4 leading-tight group-hover:text-[#800000] transition-colors">
+                    {service.title}
+                  </h3>
+
+                  {/* Divider */}
+                  <div className="w-12 h-1 bg-[#fecc02] rounded-full mb-4 transition-all duration-300"></div>
+
+                  {/* Description */}
+                  <p className="text-[#800000]/70 leading-relaxed flex-grow mb-6">
+                    {service.description}
+                  </p>
                 </div>
 
-                {/* Title with underline effect */}
-                <h3 className="text-xl font-bold text-white mb-4 relative pb-3">
-                  {service.title}
-                  <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-yellow-500 transition-all duration-300 group-hover:w-full"></span>
-                </h3>
-
-                {/* Description */}
-                <p className="text-white/80 mb-6 flex-grow">{service.description}</p>
+                {/* Bottom gradient accent */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#fecc02]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
             </motion.div>
           ))}
@@ -119,19 +139,18 @@ export default function ServicesSection({ block }: ServicesBlockProps) {
               transition: { delay: 0.8, duration: 0.6 },
             },
           }}
-          className="text-center mt-16"
+          className="text-center mt-20"
         >
           <Link
             href="/programs"
-            className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-400 text-blue-900 font-semibold rounded-lg shadow-lg shadow-yellow-500/20 hover:shadow-xl hover:shadow-yellow-500/30 transition-all duration-300 hover:-translate-y-1"
+            className="inline-flex items-center justify-center px-10 py-4 bg-[#800000] text-[#fffff6] font-bold rounded-xl shadow-lg shadow-[#800000]/30 hover:shadow-2xl hover:shadow-[#800000]/40 transition-all duration-300 hover:-translate-y-1 hover:bg-[#800000]/90 border-2 border-[#800000] hover:border-[#fecc02] group"
           >
-            <span>Explore all programs</span>
+            <span>Explore All Programs</span>
             <svg
-              className="ml-2 w-5 h-5"
+              className="ml-3 w-5 h-5 transform group-hover:translate-x-1 transition-transform"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

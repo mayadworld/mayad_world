@@ -121,7 +121,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
                   <h1 className="text-4xl md:text-5xl 2xl:text-6xl font-bold text-[#800000] leading-tight">
                     {currentSlideData.heading}
                   </h1>
-                  <div className="h-1 w-20 md:w-24 bg-yellow-500 mt-4 rounded-full" />
+                  <div className="h-1 w-20 md:w-24 bg-[#fecc02] mt-4 rounded-full" />
                 </motion.div>
 
                 {/* Subheading */}
@@ -137,7 +137,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
                   {[...Array(6)].map((_, i) => (
                     <motion.div
                       key={i}
-                      className={`h-1 rounded-full ${i % 2 === 0 ? 'bg-yellow-500' : 'bg-[#800000]'}`}
+                      className={`h-1 rounded-full ${i % 2 === 0 ? 'bg-[#fecc02]' : 'bg-[#800000]'}`}
                       style={{ width: `${12 + i * 8}px` }}
                       initial={{ scaleX: 0 }}
                       animate={{ scaleX: 1 }}
@@ -148,7 +148,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
 
                 {/* Location info */}
                 <motion.div variants={itemVariants} className="flex items-center text-blue-100/80">
-                  <MapPin className="w-4 h-4 text-yellow-500 mr-2" />
+                  <MapPin className="w-4 h-4 text-[#fecc02] mr-2" />
                   <span className="text-sm md:text-base text-[#800000] font-medium">
                     Global Conferences • Online Programs Available
                   </span>
@@ -187,7 +187,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
                   </Link>
                   <Link
                     href="/programs"
-                    className="flex-1 bg-[#fecc02] text-[#800000] border border-[#800000] hover:bg-yellow-500/10 px-6 py-2 rounded-lg justify-center items-center text-center transition-all duration-300 font-semibold"
+                    className="flex-1 bg-[#fecc02] text-[#800000] border border-[#800000] hover:bg-[#fecc02]/10 px-6 py-2 rounded-lg justify-center items-center text-center transition-all duration-300 font-semibold"
                   >
                     All Programs
                   </Link>
@@ -204,7 +204,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
           {/* Play/Pause button */}
           <button
             onClick={() => setIsPlaying(!isPlaying)}
-            className="text-white hover:text-yellow-500 transition-colors duration-300"
+            className="text-white hover:text-[#fecc02] transition-colors duration-300"
             aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
           >
             {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
@@ -218,7 +218,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
                 onClick={() => goToSlide(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   currentSlide === index
-                    ? 'bg-yellow-500 scale-125'
+                    ? 'bg-[#fecc02] scale-125'
                     : 'bg-white/40 hover:bg-white/60'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}

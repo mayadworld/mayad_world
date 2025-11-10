@@ -33,9 +33,9 @@ export default async function HomePage() {
     <div>
       <div className="page">
         {page.layout?.map((block, index) => renderBlock(block, index))}
-        {/* <CTABlock /> */}
         <EventsSection />
-        {/* <Newsletter /> */}
+        <CTABlock />
+        <Newsletter />
       </div>
     </div>
   )
@@ -50,11 +50,11 @@ function renderBlock(block: any, index: number) {
     case 'home-about':
       return <AboutUsSection key={index} block={block} />
 
-    // case 'services-block':
-    //   return <ServicesCarouselSection key={index} block={block} />
+    case 'services-block':
+      return <ServicesCarouselSection key={index} block={block} />
 
-    // case 'why-choose-us':
-    //   return <WhyBlock key={index} block={block} />
+    case 'why-choose-us':
+      return <WhyBlock key={index} block={block} />
 
     default:
       return null

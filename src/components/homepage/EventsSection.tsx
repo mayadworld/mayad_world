@@ -9,10 +9,10 @@ export default async function EventsSection() {
   const events = data.slice(0, 4)
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden px-8 md:px-16">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-32 bg-[#800000]/5 -skew-y-6"></div>
-      <div className="absolute top-40 right-0 w-72 h-72 rounded-full bg-amber-400/10 blur-3xl"></div>
+      <div className="absolute top-40 right-0 w-72 h-72 rounded-full bg-[#fecc02]/10 blur-3xl"></div>
       <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-[#800000]/5 blur-3xl"></div>
 
       <section className="py-20 relative z-10">
@@ -73,7 +73,7 @@ export default async function EventsSection() {
                     </div>
                   </div>
 
-                  <p className="text-gray-700 mb-8">{events[0].description}</p>
+                  <p className="text-gray-700 mb-8 line-clamp-6">{events[0].description}</p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
                     {events[0].purchaseLink && (
@@ -81,7 +81,7 @@ export default async function EventsSection() {
                         href={events[0].purchaseLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center px-6 py-3 bg-[#800000] hover:bg-blue-800 text-white font-medium rounded-lg transition shadow-md"
+                        className="flex items-center justify-center px-6 py-3 bg-[#800000] hover:bg-[#fecc02] text-white font-medium rounded-lg transition shadow-md"
                       >
                         Register Now
                         <ExternalLink size={16} className="ml-2" />
@@ -117,7 +117,7 @@ export default async function EventsSection() {
                   </div>
 
                   <div className="p-6 flex-grow flex flex-col">
-                    <h3 className="text-xl font-bold text-[#800000] mb-3 group-hover:text-blue-800 transition-colors">
+                    <h3 className="text-xl font-bold text-[#800000] mb-3 transition-colors">
                       {event.title}
                     </h3>
                     <p className="text-gray-600 text-sm line-clamp-3 mb-4 flex-grow">
@@ -141,7 +141,7 @@ export default async function EventsSection() {
                           href={event.purchaseLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center justify-center px-3 py-1 bg-amber-400 hover:bg-[#fecc02] text-[#800000] text-sm font-medium rounded-md transition shadow-sm"
+                          className="flex items-center justify-center px-3 py-1 bg-[#fecc02] hover:bg-[#fecc02] text-[#800000] text-sm font-medium rounded-md transition shadow-sm"
                         >
                           Register
                         </a>

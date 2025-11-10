@@ -57,16 +57,16 @@ export default function Navbar() {
                     alt="Logo"
                     width={50}
                     height={50}
-                    className="w-8 md:w-10 h-8 md:h-10 rounded-full object-cover"
+                    className="w-8 md:w-12 h-8 md:h-12 rounded-full object-cover"
                   />
                 </div>
 
                 <div className={`${anton.className} flex flex-col leading-tight`}>
                   <span className={`text-lg md:text-xl font-semibold text-[#800000] tracking-wide`}>
-                    Mayad World
+                    Mayad World Connections
                   </span>
-                  <span className="text-[#800000] tracking-wider uppercase text-xs md:text-sm font-light">
-                    Connections
+                  <span className="text-[#800000] tracking-wider uppercase text-xs md:text-xs font-light">
+                    Incubating Global Citizens
                   </span>
                 </div>
               </div>
@@ -104,7 +104,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#fffff6] absolute right-8 w-1/2 py-4 px-6 shadow-lg border-b-2 border-yellow-500">
+        <div className="md:hidden bg-[#fffff6] absolute right-8 w-1/2 py-4 px-6 shadow-lg border-b-2 border-[#fecc02]">
           <div className="flex flex-col space-y-5">
             {navItems.map((nav, index) => (
               <Link

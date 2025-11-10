@@ -22,7 +22,7 @@ export default function GalleryHero() {
             Our Curated Gallery
           </h1>
 
-          <div className="w-24 h-1 bg-yellow-500 rounded-full mb-8"></div>
+          <div className="w-24 h-1 bg-[#fecc02] rounded-full mb-8"></div>
         </div>
       </div>
 

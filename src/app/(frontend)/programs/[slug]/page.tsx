@@ -103,18 +103,18 @@ export default async function ProgramDetails({ params }: { params: Promise<{ slu
       {/* Upcoming Events Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white py-16">
         {/* Decorative background elements */}
-        <div className="absolute top-0 left-0 w-full h-32 bg-blue-900/5 -skew-y-6"></div>
-        <div className="absolute top-40 right-0 w-72 h-72 rounded-full bg-amber-400/10 blur-3xl"></div>
-        <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-blue-900/5 blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-32 bg-[#800000]/5 -skew-y-6"></div>
+        <div className="absolute top-40 right-0 w-72 h-72 rounded-full bg-[#fecc02]/10 blur-3xl"></div>
+        <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-[#800000]/5 blur-3xl"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-blue-900 mb-4">Upcoming Events</h2>
+            <h2 className="text-3xl font-bold text-[#800000] mb-4">Upcoming Events</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Join us at these upcoming events for the {program.title} program
             </p>
-            <div className="w-24 h-1 bg-amber-400 mx-auto mt-6"></div>
+            <div className="w-24 h-1 bg-[#fecc02] mx-auto mt-6"></div>
           </div>
 
           {events && events.length > 0 ? (
@@ -139,7 +139,7 @@ export default async function ProgramDetails({ params }: { params: Promise<{ slu
 
                     {/* Date overlay badge */}
                     {event.date && (
-                      <div className="absolute top-4 right-4 bg-blue-900/80 text-white text-xs font-medium px-3 py-2 rounded-lg backdrop-blur-sm">
+                      <div className="absolute top-4 right-4 bg-[#800000]/80 text-white text-xs font-medium px-3 py-2 rounded-lg backdrop-blur-sm">
                         <Calendar size={14} className="inline mr-1" />
                         {event.date}
                       </div>
@@ -147,7 +147,7 @@ export default async function ProgramDetails({ params }: { params: Promise<{ slu
                   </div>
 
                   <div className="p-6 flex-grow flex flex-col">
-                    <h3 className="text-xl font-bold text-blue-900 mb-3 group-hover:text-blue-700 transition-colors">
+                    <h3 className="text-xl font-bold text-[#800000] mb-3 group-hover:text-blue-700 transition-colors">
                       {event.title}
                     </h3>
 
@@ -167,7 +167,7 @@ export default async function ProgramDetails({ params }: { params: Promise<{ slu
                     <div className="flex items-center gap-3 mt-auto pt-4 border-t border-gray-100">
                       <Link
                         href={event.purchaseLink || `/events/${event.slug}`}
-                        className="flex items-center justify-center px-5 py-2 bg-amber-400 hover:bg-amber-500 text-blue-900 text-sm font-medium rounded-lg transition-colors shadow-sm w-full"
+                        className="flex items-center justify-center px-5 py-2 bg-[#fecc02] hover:bg-amber-500 text-[#800000] text-sm font-medium rounded-lg transition-colors shadow-sm w-full"
                       >
                         {event.purchaseLink ? 'Register Now' : 'View Details'}
                       </Link>
@@ -179,14 +179,14 @@ export default async function ProgramDetails({ params }: { params: Promise<{ slu
           ) : (
             <div className="bg-white rounded-xl shadow-md p-12 text-center max-w-2xl mx-auto">
               <Calendar size={48} className="mx-auto text-blue-200 mb-4" />
-              <h3 className="text-xl font-bold text-blue-900 mb-2">No Events Scheduled</h3>
+              <h3 className="text-xl font-bold text-[#800000] mb-2">No Events Scheduled</h3>
               <p className="text-gray-600 mb-6">
                 There are no upcoming events for this program at the moment. Please check back later
                 or sign up for notifications.
               </p>
               <Link
                 href="/notifications/subscribe"
-                className="inline-flex items-center justify-center px-5 py-2 bg-blue-100 hover:bg-blue-200 text-blue-900 text-sm font-medium rounded-lg transition-colors"
+                className="inline-flex items-center justify-center px-5 py-2 bg-blue-100 hover:bg-blue-200 text-[#800000] text-sm font-medium rounded-lg transition-colors"
               >
                 Get Notified About New Events
               </Link>
@@ -212,8 +212,8 @@ export default async function ProgramDetails({ params }: { params: Promise<{ slu
       <section className="bg-white py-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-2xl font-bold text-blue-900">You May Also Be Interested In</h2>
-            <div className="w-16 h-1 bg-amber-400 mx-auto mt-4"></div>
+            <h2 className="text-2xl font-bold text-[#800000]">You May Also Be Interested In</h2>
+            <div className="w-16 h-1 bg-[#fecc02] mx-auto mt-4"></div>
           </div>
 
           <div className="flex overflow-x-auto gap-6 pb-4 snap-x scrollbar-hide">
@@ -222,7 +222,7 @@ export default async function ProgramDetails({ params }: { params: Promise<{ slu
                 key={prog.id}
                 className="min-w-[280px] max-w-[280px] bg-blue-50 rounded-xl p-6 flex flex-col snap-start"
               >
-                <h3 className="font-bold text-blue-900 mb-2">{prog.title}</h3>
+                <h3 className="font-bold text-[#800000] mb-2">{prog.title}</h3>
                 <p className="text-sm text-gray-600 mb-4 line-clamp-3 flex-grow">
                   {prog.description}
                 </p>

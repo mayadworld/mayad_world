@@ -79,7 +79,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
   return (
     <section
       ref={ref}
-      className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800"
+      className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-blue-950 via-[#800000] to-blue-800"
     >
       {/* Background elements */}
       <div className="absolute inset-0">
@@ -136,7 +136,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
                         className="object-cover object-top group-hover:scale-110 transition-transform duration-500"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-800 to-blue-900 text-white">
+                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-800 to-[#800000] text-white">
                         <Users className="w-16 h-16 opacity-50" />
                       </div>
                     )}

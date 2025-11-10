@@ -42,20 +42,19 @@ export default function Newsletter() {
   }
 
   return (
-    <section className="bg-blue-900 py-12 relative">
-      <div className="absolute top-0 right-0 w-full h-12 bg-blue-900 -skew-y-2 transform -translate-y-6"></div>
+    <section className="bg-[#800000] py-12 relative px-8 md:px-16">
+      <div className="absolute top-0 right-0 w-full h-12 bg-[#800000] -skew-y-2 transform -translate-y-6"></div>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-blue-800 to-blue-900 rounded-2xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
+        <div className="bg-[#fffff6] rounded-2xl shadow-2xl p-8 md:p-12 relative overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-amber-400/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-700/30 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[#fecc02]/10 rounded-full blur-3xl"></div>
 
           <div className="relative z-10 md:flex items-center justify-between mx-auto">
             <div className="mb-6 md:mb-0 md:mr-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              <h3 className="text-2xl md:text-3xl font-bold text-[#800000] mb-2">
                 Stay Updated on Events
               </h3>
-              <p className="text-blue-100">
+              <p className="text-[#800000]">
                 Get Notified About Upcoming Programs and Global Events
               </p>
             </div>
@@ -68,12 +67,12 @@ export default function Newsletter() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Your email address"
-                    className="w-full px-5 py-4 pr-14 rounded-lg bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#eab308] focus:ring-opacity-50 transition-all"
+                    className="w-full px-5 py-4 pr-14 rounded-lg bg-[#800000] bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 text-white placeholder:text-[#fffff6] focus:outline-none focus:ring-2 focus:ring-[#fecc02] focus:ring-opacity-50 transition-all"
                     required
                   />
                   <button
                     type="submit"
-                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#eab308] text-blue-900 p-2.5 rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white"
+                    className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#eab308] text-[#800000] p-2.5 rounded-md hover:bg-opacity-90 transition-all focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
                     aria-label="Subscribe"
                   >
                     <Send className="h-5 w-5" />
