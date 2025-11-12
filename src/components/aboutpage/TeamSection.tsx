@@ -116,7 +116,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
             <div className="w-24 h-1 bg-[#fecc02] mx-auto mb-6"></div>
             <p className="text-blue-100/80 text-lg max-w-2xl mx-auto">
               The passionate educators and changemakers shaping the future of youth through global
-              education, leadership and opportunity.
+              education, leadership, and opportunity.
             </p>
           </motion.div>
 
