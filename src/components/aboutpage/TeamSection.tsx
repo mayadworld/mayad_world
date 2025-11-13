@@ -79,7 +79,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
   return (
     <section
       ref={ref}
-      className="py-16 md:py-24 px-8 md:px-16 relative overflow-hidden bg-[#800000]"
+      className="py-16 md:py-8 px-8 md:px-16 relative overflow-hidden bg-[#800000]"
     >
       {/* Background elements */}
       <div className="absolute inset-0">
@@ -142,11 +142,11 @@ export default function TeamSection({ block }: TeamBlockProps) {
                     )}
 
                     {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-950/60 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#800000]/60 via-transparent to-transparent"></div>
 
                     {/* Role badge */}
                     <div className="absolute top-4 left-4">
-                      <span className="bg-[#fecc02] text-blue-950 px-3 py-1 rounded-full text-xs font-bold">
+                      <span className="bg-[#fecc02] text-[#800000] px-3 py-1 rounded-full text-xs font-bold">
                         {member.role}
                       </span>
                     </div>

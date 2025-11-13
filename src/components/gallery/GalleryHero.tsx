@@ -3,16 +3,13 @@ import React from 'react'
 
 export default function GalleryHero() {
   return (
-    <section className="relative bg-gradient-to-br from-blue-950 to-blue-800 text-white py-16 md:py-24 overflow-hidden">
+    <section className="relative bg-[#800000] text-white py-16 md:py-24 px-8 md:px-16 overflow-hidden">
       {/* Animated background blobs */}
-      <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-yellow-400 opacity-20 blur-3xl animate-pulse"></div>
+      <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#fecc02] opacity-20 blur-3xl animate-pulse"></div>
+
       <div
-        className="absolute top-1/2 left-1/4 w-48 h-48 rounded-full bg-blue-400 opacity-20 blur-3xl animate-pulse"
-        style={{ animationDuration: '8s' }}
-      ></div>
-      <div
-        className="absolute -bottom-24 -left-12 w-72 h-72 rounded-full bg-yellow-400 opacity-15 blur-3xl animate-pulse"
-        style={{ animationDuration: '12s' }}
+        className="absolute -bottom-24 -left-12 w-72 h-72 rounded-full bg-[#fecc02] opacity-15 blur-3xl animate-pulse"
+        style={{ animationDuration: '60s' }}
       ></div>
 
       {/* Main content container */}

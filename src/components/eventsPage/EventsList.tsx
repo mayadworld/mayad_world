@@ -9,7 +9,7 @@ export default async function EventsList() {
   const events = data
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-blue-50 to-white" id="events">
+    <div className="relative overflow-hidden px-8 md:px-16" id="events">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-32 bg-[#800000]/5 -skew-y-6"></div>
       <div className="absolute top-40 right-0 w-72 h-72 rounded-full bg-[#fecc02]/10 blur-3xl"></div>

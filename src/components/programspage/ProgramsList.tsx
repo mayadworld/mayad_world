@@ -34,9 +34,7 @@ export default async function ProgramsList() {
                 key={program.id}
                 className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col border border-gray-100"
               >
-                <div className="relative h-48 bg-blue-800">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-800 to-[#800000] group-hover:opacity-90 transition-opacity"></div>
-
+                <div className="relative h-48 bg-[#800000]">
                   {/* Program icon */}
                   <div className="absolute top-4 left-2 right-0 inset-0 opacity-30 group-hover:opacity-40 transition-opacity">
                     <Award size={40} className="text-yellow-200" />
@@ -44,7 +42,7 @@ export default async function ProgramsList() {
 
                   {/* Program title overlay */}
                   <div className="absolute flex justify-center items-center inset-0 p-4">
-                    <h3 className="text-xl md:text-3xl font-bold text-white group-hover:text-yellow-400 transition-colors">
+                    <h3 className="text-xl md:text-3xl font-bold text-white group-hover:text-[#fecc02] transition-colors">
                       {program.title}
                     </h3>
                   </div>
@@ -60,7 +58,7 @@ export default async function ProgramsList() {
                   <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
                     <Link
                       href={`/programs/${program.slug}`}
-                      className="text-[#800000] font-semibold hover:text-blue-800 transition-colors flex items-center gap-1 bg-yellow-400/20 hover:bg-yellow-400/60 rounded-full px-4 py-2"
+                      className="text-[#800000] font-semibold transition-colors flex items-center gap-1 bg-[#fecc02]/20 hover:bg-[#fecc02]/60 rounded-full px-4 py-2"
                     >
                       Program Details
                     </Link>

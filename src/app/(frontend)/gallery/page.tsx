@@ -130,7 +130,7 @@ export default async function GalleryPage({ searchParams }: Props) {
   return (
     <>
       <GalleryHero />
-      <section className="py-12 container mx-auto px-4">
+      <section className="py-12 container mx-auto px-8 md:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {posts.map((item) => (
             <GalleryCard key={item.id} item={item} />

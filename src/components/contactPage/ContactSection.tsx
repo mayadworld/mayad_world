@@ -278,7 +278,7 @@ export default function ContactForm({ block }: ContactBlock) {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full px-6 py-3 bg-[#800000] hover:bg-[#0c4075] text-white font-medium rounded-md shadow-sm transition duration-150 flex items-center justify-center"
+                    className="w-full px-6 py-3 bg-[#800000] text-white font-medium rounded-md shadow-sm transition duration-150 flex items-center justify-center cursor-pointer"
                   >
                     {submitting ? (
                       <>
@@ -305,7 +305,7 @@ export default function ContactForm({ block }: ContactBlock) {
                         Processing...
                       </>
                     ) : (
-                      <span className="flex items-center">
+                      <span className="flex items-center hover:scale-105 transition-transform">
                         Submit Message <ArrowRight size={18} className="ml-2" />
                       </span>
                     )}

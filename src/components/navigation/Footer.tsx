@@ -28,9 +28,8 @@ export default function Footer() {
     { label: 'Registration', link: '/register' },
   ]
   return (
-    <footer className="bg-[#800000] py-16 px-8 md:px-16">
+    <footer className="bg-[#800000] py-8 px-8 md:px-16 border-t-2 border-[#fecc02] relative overflow-hidden">
       {/* Top accent line */}
-      <div className="h-px bg-[#fecc02] w-full mb-16"></div>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
         <div className="space-y-8">

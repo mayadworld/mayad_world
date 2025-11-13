@@ -167,7 +167,7 @@ export default function RegistrationForm() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <LoaderCircle className="w-10 h-10 text-yellow-400 animate-spin" />
+          <LoaderCircle className="w-10 h-10 text-[#fecc02] animate-spin" />
           <h3 className="text-lg sm:text-xl font-semibold text-white">Loading Registration Form</h3>
           <p className="text-blue-100 text-sm sm:text-base">
             Please wait while we prepare your registration form.
@@ -185,14 +185,14 @@ export default function RegistrationForm() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="bg-yellow-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-md shadow-yellow-400/20">
+          <div className="bg-[#fecc02] rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 shadow-md shadow-[#fecc02]/20">
             <CheckCircle className="w-8 h-8 text-[#800000]" />
           </div>
           <h3 className="text-2xl font-bold text-white mb-3">Registration Complete!</h3>
           <p className="text-blue-100 mb-6">Thank you for registering!</p>
           <button
             onClick={() => setSuccess(false)}
-            className="inline-flex items-center px-6 py-3 bg-yellow-400 text-[#800000] font-medium rounded-lg hover:bg-[#fecc02] transition duration-150 shadow-md"
+            className="inline-flex items-center px-6 py-3 bg-[#fecc02] text-[#800000] font-medium rounded-lg hover:bg-[#fecc02] transition duration-150 shadow-md"
           >
             Register for Another Event
           </button>
@@ -240,14 +240,14 @@ export default function RegistrationForm() {
           <div className="grid md:grid-cols-5">
             {/* Left Column - Decorative */}
             <div className="hidden md:block md:col-span-2 bg-gradient-to-br from-blue-950 to-[#800000] p-8 relative overflow-hidden">
-              <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-yellow-400 opacity-20 blur-3xl"></div>
+              <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-[#fecc02] opacity-20 blur-3xl"></div>
               <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-blue-400 opacity-20 blur-3xl"></div>
 
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div className="mb-8">
                   <div className="inline-flex items-center bg-blue-800/70 backdrop-blur-sm rounded-full px-3 py-1 border border-blue-700/50 mb-4">
                     <span className="flex items-center text-xs font-medium text-blue-100">
-                      <MapPin size={12} className="mr-2 text-yellow-400" />
+                      <MapPin size={12} className="mr-2 text-[#fecc02]" />
                       International Events
                     </span>
                   </div>
@@ -277,13 +277,13 @@ export default function RegistrationForm() {
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg shadow-yellow-400/20">
+                    <div className="w-8 h-8 rounded-full bg-[#fecc02] flex items-center justify-center shadow-lg shadow-[#fecc02]/20">
                       <CheckCircle size={16} className="text-[#800000]" />
                     </div>
                     <p className="text-sm text-blue-100">Expert-led programs</p>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center shadow-lg shadow-yellow-400/20">
+                    <div className="w-8 h-8 rounded-full bg-[#fecc02] flex items-center justify-center shadow-lg shadow-[#fecc02]/20">
                       <CheckCircle size={16} className="text-[#800000]" />
                     </div>
                     <p className="text-sm text-blue-100">Global network of participants</p>
@@ -309,7 +309,7 @@ export default function RegistrationForm() {
                             className="text-[#800000] mr-2 mt-0.5 flex-shrink-0"
                           />
                           <div>
-                            <p className="text-yellow-400">{event.title}</p>
+                            <p className="text-[#fecc02]">{event.title}</p>
                             <p className="text-[#800000]">{event.date}</p>
                           </div>
                         </li>

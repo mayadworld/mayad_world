@@ -9,7 +9,7 @@ export default function RegisterHero() {
         <div className="absolute top-0 left-0 w-full h-full"></div>
       </div>
 
-      <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-yellow-400 opacity-20 blur-3xl"></div>
+      <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-[#fecc02] opacity-20 blur-3xl"></div>
       <div className="absolute -bottom-24 -left-12 w-64 h-64 rounded-full bg-blue-400 opacity-20 blur-3xl"></div>
 
       {/* Main content container */}

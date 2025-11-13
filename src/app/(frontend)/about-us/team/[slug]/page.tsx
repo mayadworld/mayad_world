@@ -88,7 +88,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
   const descriptionParagraphs = team_member.bio.split('\n\n')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-950 via-[#800000] to-blue-800 relative overflow-hidden pt-20">
+    <div className="min-h-screen bg-[#800000] relative overflow-hidden pt-20">
       {/* Background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-[#fecc02]/10 blur-3xl animate-pulse" />

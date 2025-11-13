@@ -21,14 +21,14 @@ export default function ContactHero() {
   }
 
   return (
-    <section className="relative bg-gradient-to-br from-blue-950 to-blue-800 text-white pt-32 pb-16 overflow-hidden">
+    <section className="relative bg-[#800000] text-white pt-32 pb-16 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
       </div>
 
-      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-yellow-400 opacity-20 blur-3xl"></div>
-      <div className="absolute -bottom-32 -left-16 w-80 h-80 rounded-full bg-blue-400 opacity-20 blur-3xl"></div>
+      <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-[#fecc02] opacity-20 blur-3xl"></div>
+      <div className="absolute -bottom-32 -left-16 w-80 h-80 rounded-full bg-[#fecc02] opacity-20 blur-3xl"></div>
 
       {/* Main content container */}
       <div className="xl:container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -37,13 +37,13 @@ export default function ContactHero() {
           <div className="space-y-8">
             {/* Badge */}
             <motion.div
-              className="inline-flex items-center bg-blue-800/70 backdrop-blur-sm rounded-full px-4 py-2 border border-blue-700/50"
+              className="inline-flex items-center bg-[#fffff6]/40 backdrop-blur-sm rounded-full px-4 py-2 border border-[#fecc02]"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="flex items-center text-sm font-medium text-blue-100">
-                <Mail size={14} className="mr-2 text-yellow-400" />
+              <span className="flex items-center text-sm font-medium text-[#fffff6]">
+                <Mail size={14} className="mr-2 text-[#fecc02]" />
                 We{"'"}d love to hear from you
               </span>
             </motion.div>
@@ -60,7 +60,7 @@ export default function ContactHero() {
                 Let{"'"}s Start a{' '}
                 <span className="relative inline-block">
                   <span className="relative z-10">Conversation</span>
-                  <span className="absolute -bottom-2 left-0 w-full h-3 bg-yellow-400/30 rounded-full -rotate-1"></span>
+                  <span className="absolute -bottom-2 left-0 w-full h-3 bg-[#fecc02]/30 rounded-full -rotate-1"></span>
                 </span>
               </h1>
               <p className="text-lg text-blue-100/90 max-w-lg">
@@ -81,21 +81,21 @@ export default function ContactHero() {
             <div className="relative">
               {/* Main circle */}
               <motion.div
-                className="w-80 h-80 rounded-full border-4 border-blue-400/30 flex items-center justify-center"
+                className="w-80 h-80 rounded-full border-4 border-[#fecc02]/30 flex items-center justify-center"
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 1, delay: 0.7 }}
               >
                 {/* Inner circle */}
                 <motion.div
-                  className="w-64 h-64 rounded-full border-4 border-yellow-400/30 flex items-center justify-center"
+                  className="w-64 h-64 rounded-full border-4 border-[#fecc02]/30 flex items-center justify-center"
                   initial={{ scale: 0.8, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 1, delay: 0.9 }}
                 >
                   {/* Center circle */}
                   <motion.div
-                    className="w-48 h-48 rounded-full bg-gradient-to-br from-yellow-400 to-[#fecc02] flex items-center justify-center shadow-lg shadow-yellow-400/20"
+                    className="w-48 h-48 rounded-full bg-gradient-to-br from-[#fecc02] to-[#fecc02] flex items-center justify-center shadow-lg shadow-[#fecc02]/20"
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 1, delay: 1.1 }}
@@ -121,13 +121,13 @@ export default function ContactHero() {
 
               {/* Decorative small circles */}
               <motion.div
-                className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-blue-400"
+                className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-[#fecc02]"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.4 }}
               />
               <motion.div
-                className="absolute -bottom-2 left-10 w-8 h-8 rounded-full bg-yellow-400"
+                className="absolute -bottom-2 left-10 w-8 h-8 rounded-full bg-[#fecc02]"
                 initial={{ scale: 0, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.6 }}
@@ -138,7 +138,7 @@ export default function ContactHero() {
       </div>
 
       {/* Bottom decorative element */}
-      <div className="absolute bottom-0 left-0 right-0 h-2 bg-yellow-400"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-2 bg-[#fecc02]"></div>
     </section>
   )
 }
