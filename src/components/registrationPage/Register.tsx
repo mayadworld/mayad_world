@@ -162,7 +162,7 @@ export default function RegistrationForm() {
     return (
       <section className="max-w-6xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <motion.div
-          className="bg-gradient-to-br from-blue-950 to-[#800000] rounded-lg p-6 sm:p-8 text-center flex flex-col items-center space-y-4 shadow-lg max-w-md mx-auto border border-blue-800"
+          className="bg-[#800000] rounded-lg p-6 sm:p-8 text-center flex flex-col items-center space-y-4 shadow-lg max-w-md mx-auto border border-blue-800"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -180,7 +180,7 @@ export default function RegistrationForm() {
     return (
       <section className="max-w-6xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <motion.div
-          className="bg-gradient-to-br from-blue-950 to-[#800000] rounded-lg p-8 text-center shadow-lg border border-blue-800 max-w-md"
+          className="bg-[#800000] rounded-lg p-8 text-center shadow-lg border border-blue-800 max-w-md"
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -201,13 +201,13 @@ export default function RegistrationForm() {
     )
 
   return (
-    <section className="py-8 sm:py-16 bg-blue-50">
+    <section className="py-8 sm:py-16 px-8 md:px-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-[#800000] mb-4">
             Global Youth Programs Registration
           </h2>
-          <p className="text-blue-700 max-w-2xl mx-auto">
+          <p className="text-[#800000] max-w-2xl mx-auto">
             Register for our world-class Model UN conferences, international summer camps, and youth
             Olympic programs
           </p>
@@ -239,13 +239,13 @@ export default function RegistrationForm() {
         >
           <div className="grid md:grid-cols-5">
             {/* Left Column - Decorative */}
-            <div className="hidden md:block md:col-span-2 bg-gradient-to-br from-blue-950 to-[#800000] p-8 relative overflow-hidden">
+            <div className="hidden md:block md:col-span-2 bg-[#800000] p-8 relative overflow-hidden">
               <div className="absolute -top-16 -left-16 w-48 h-48 rounded-full bg-[#fecc02] opacity-20 blur-3xl"></div>
               <div className="absolute -bottom-16 -right-16 w-48 h-48 rounded-full bg-blue-400 opacity-20 blur-3xl"></div>
 
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div className="mb-8">
-                  <div className="inline-flex items-center bg-blue-800/70 backdrop-blur-sm rounded-full px-3 py-1 border border-blue-700/50 mb-4">
+                  <div className="inline-flex items-center bg-[#fffff6]/20 backdrop-blur-sm rounded-full px-3 py-1 border border-[#fecc02]/50 mb-4">
                     <span className="flex items-center text-xs font-medium text-blue-100">
                       <MapPin size={12} className="mr-2 text-[#fecc02]" />
                       International Events
@@ -256,19 +256,19 @@ export default function RegistrationForm() {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="bg-blue-800/50 backdrop-blur-sm rounded-lg p-4 border border-blue-700/50">
-                    <h4 className="font-medium text-white mb-2">Upcoming Events</h4>
+                  <div className="bg-[#fffff6]/50 backdrop-blur-sm rounded-lg p-4 border border-blue-700/50">
+                    <h4 className="font-medium text-[#fffff6] mb-2">Upcoming Events</h4>
                     <ul className="space-y-3 text-sm">
                       {events.map((event) => {
                         return (
                           <li key={eventType} className="flex items-start">
                             <Calendar
                               size={16}
-                              className="text-blue-100 mr-2 mt-0.5 flex-shrink-0"
+                              className="text-[#fffff6] mr-2 mt-0.5 flex-shrink-0"
                             />
                             <div>
-                              <p className="text-white">{event.title}</p>
-                              <p className="text-blue-200">{event.date}</p>
+                              <p className="text-[#fffff6] font-semibold">{event.title}</p>
+                              <p className="text-white">{event.date}</p>
                             </div>
                           </li>
                         )
@@ -296,7 +296,7 @@ export default function RegistrationForm() {
             <div className="p-6 sm:p-8 md:col-span-3">
               <div className="md:hidden mb-6">
                 <h3 className="text-2xl font-bold text-[#800000] mb-2">{getEventTitle()}</h3>
-                <p className="text-blue-600 text-sm mb-6">{getEventDescription()}</p>
+                <p className="text-[#800000] text-sm mb-6">{getEventDescription()}</p>
 
                 <div className="bg-blue-50 rounded-lg p-4 mb-6">
                   <h4 className="font-medium text-[#800000] mb-2">Upcoming Events</h4>
@@ -404,7 +404,7 @@ export default function RegistrationForm() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-[#800000] to-blue-800 hover:from-blue-800 hover:to-blue-700 text-white font-medium rounded-lg shadow transition duration-150 flex items-center justify-center"
+                    className="w-full px-6 py-3 bg-[#800000] text-white font-medium rounded-lg shadow transition duration-150 flex items-center justify-center cursor-pointer"
                   >
                     {submitting ? (
                       <>
@@ -412,7 +412,7 @@ export default function RegistrationForm() {
                         Processing...
                       </>
                     ) : (
-                      <span className="flex items-center">
+                      <span className="flex items-center hover:scale-105 transition-transform">
                         Register Now <ArrowRight size={18} className="ml-2" />
                       </span>
                     )}
