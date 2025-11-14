@@ -126,7 +126,7 @@ export default function ContactForm({ block }: ContactBlock) {
     )
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-8 md:py-16 bg-gray-50 px-4 md:px-16">
       <div className="max-w-7xl mx-auto px-8 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#800000] mb-4">Get In Touch</h2>

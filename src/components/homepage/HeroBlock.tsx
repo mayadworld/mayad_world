@@ -181,13 +181,13 @@ export default function HeroBlock({ block }: HeroSlideProps) {
                 <div className="flex gap-3">
                   <Link
                     href={`/programs/${currentSlideData.program.slug}`}
-                    className="flex-1 bg-[#800000] font-semibold px-6 py-2 rounded-lg justify-center items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-[#fffff6]"
+                    className="flex-1 bg-[#800000] font-semibold px-2 py-2 rounded-lg justify-center items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-[#fffff6]"
                   >
                     Details
                   </Link>
                   <Link
                     href="/programs"
-                    className="flex-1 bg-[#fecc02] text-[#800000] border border-[#800000] hover:bg-[#fecc02]/10 px-6 py-2 rounded-lg justify-center items-center text-center transition-all duration-300 font-semibold"
+                    className="flex-1 bg-[#fecc02] text-[#800000] border border-[#800000] hover:bg-[#fecc02]/10 px-2 py-2 rounded-lg justify-center items-center text-center transition-all duration-300 font-semibold"
                   >
                     All Programs
                   </Link>

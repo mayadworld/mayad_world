@@ -68,12 +68,12 @@ export default function ServicesSection({ block }: ServicesBlockProps) {
           </span>
 
           {/* Main heading */}
-          <h2 className="text-4xl md:text-5xl font-bold text-[#800000] mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#800000] mb-6 tracking-tight text-start">
             {heading}
           </h2>
 
           {/* Supporting text */}
-          <p className="max-w-3xl mx-auto text-lg text-[#800000]/70 leading-relaxed">
+          <p className="max-w-3xl mx-auto text-lg text-[#800000]/70 leading-relaxed text-start">
             Explore the initiatives and programs we offer to empower future diplomats and leaders
           </p>
         </div>

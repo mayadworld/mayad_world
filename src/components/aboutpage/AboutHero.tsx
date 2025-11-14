@@ -25,7 +25,7 @@ export default function AboutHero({ block }: AboutHeroBlockProps) {
 
   return (
     <section className="relative overflow-hidden pb-8 md:pb-0 px-8 md:px-16">
-      <div className="max-w-full mx-auto px-4 sm:px-6 md:px-8 pt-32 md:pt-0 md:py-24 lg:py-32">
+      <div className="max-w-full mx-auto px-4 sm:px-6 md:px-8 pt-10 md:pt-0 md:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Column */}
           <div className="order-2 lg:order-1 space-y-8">
@@ -89,8 +89,8 @@ export default function AboutHero({ block }: AboutHeroBlockProps) {
             </div>
 
             {/* Decorative elements */}
-            <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 -z-10"></div>
-            <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-blue-800/20 backdrop-blur-sm border border-blue-700/30 -z-10"></div>
+            <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-[#fecc02]/20 backdrop-blur-sm border border-primary/30 -z-10"></div>
+            <div className="absolute -top-8 -right-8 w-32 h-32 rounded-full bg-[#fecc02]/20 backdrop-blur-sm border border-[#800000]/30 -z-10"></div>
           </div>
         </div>
       </div>

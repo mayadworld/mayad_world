@@ -21,7 +21,7 @@ export default function ContactHero() {
   }
 
   return (
-    <section className="relative bg-[#800000] text-white pt-32 pb-16 overflow-hidden">
+    <section className="relative bg-[#800000] text-white pt-6 pb-8 md:pt-32 md:pb-16 px-4 md:px-16 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-grid-pattern"></div>
