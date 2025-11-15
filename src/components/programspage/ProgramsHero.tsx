@@ -14,7 +14,7 @@ export default function ProgramsHero() {
       {/* Content container */}
       <div className="relative z-10 container mx-auto px-4 pt-32 pb-12 flex flex-col items-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#fffff6] backdrop-blur-sm text-blue-100 px-4 py-2 rounded-full border-2 border-[#fecc02] mb-6">
+        <div className="inline-flex items-center gap-2 bg-[#fffff6] backdrop-blur-sm text-[#fffff6] px-4 py-2 rounded-full border-2 border-[#fecc02] mb-6">
           <Award size={16} className="text-[#800000]" />
           <span className="text-sm font-medium text-[#800000]">Our Programs</span>
         </div>

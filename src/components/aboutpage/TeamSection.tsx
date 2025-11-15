@@ -114,7 +114,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
               Meet Our <span className="text-[#fecc02]">Leaders</span>
             </h2>
             <div className="w-24 h-1 bg-[#fecc02] mx-auto mb-6"></div>
-            <p className="text-blue-100/80 text-lg max-w-2xl mx-auto">
+            <p className="text-[#fffff6]/80 text-lg max-w-2xl mx-auto">
               The passionate educators and changemakers shaping the future of youth through global
               education, leadership, and opportunity.
             </p>
@@ -164,7 +164,7 @@ export default function TeamSection({ block }: TeamBlockProps) {
                     <div className="h-px bg-gradient-to-r from-[#fecc02] via-[#fecc02]/50 to-transparent"></div>
 
                     {/* Bio with line clamp */}
-                    <p className="text-blue-100/90 text-sm leading-relaxed line-clamp-3">
+                    <p className="text-[#fffff6]/90 text-sm leading-relaxed line-clamp-3">
                       {member.bio}
                     </p>
 

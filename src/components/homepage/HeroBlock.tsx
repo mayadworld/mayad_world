@@ -147,7 +147,7 @@ export default function HeroBlock({ block }: HeroSlideProps) {
                 </motion.div>
 
                 {/* Location info */}
-                <motion.div variants={itemVariants} className="flex items-center text-blue-100/80">
+                <motion.div variants={itemVariants} className="flex items-center text-[#fffff6]/80">
                   <MapPin className="w-4 h-4 text-[#fecc02] mr-2" />
                   <span className="text-sm md:text-base text-[#800000] font-medium">
                     Global Conferences • Online Programs Available

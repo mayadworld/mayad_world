@@ -111,7 +111,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
         <div className="container mx-auto px-4">
           <Link
             href="/about-us"
-            className="inline-flex items-center gap-2 text-blue-100 hover:text-[#fecc02] transition-colors group"
+            className="inline-flex items-center gap-2 text-[#fffff6] hover:text-[#fecc02] transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             Go Back
@@ -179,7 +179,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                           <div className="bg-[#fecc02]/20 p-2 rounded-lg group-hover:bg-[#fecc02]/30 transition-colors">
                             <Mail className="w-4 h-4 text-[#fecc02]" />
                           </div>
-                          <span className="text-blue-100 text-sm">{team_member.email}</span>
+                          <span className="text-[#fffff6] text-sm">{team_member.email}</span>
                         </a>
                       )}
 
@@ -191,7 +191,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                           <div className="bg-[#fecc02]/20 p-2 rounded-lg group-hover:bg-[#fecc02]/30 transition-colors">
                             <Phone className="w-4 h-4 text-[#fecc02]" />
                           </div>
-                          <span className="text-blue-100 text-sm">{team_member.phone}</span>
+                          <span className="text-[#fffff6] text-sm">{team_member.phone}</span>
                         </a>
                       )}
 
@@ -200,7 +200,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                         <div className="bg-[#fecc02]/20 p-2 rounded-lg">
                           <MapPin className="w-4 h-4 text-[#fecc02]" />
                         </div>
-                        <span className="text-blue-100 text-sm">Nairobi, Kenya</span>
+                        <span className="text-[#fffff6] text-sm">Nairobi, Kenya</span>
                       </div>
                     </div>
 
@@ -239,7 +239,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                     {descriptionParagraphs.map((paragraph: string, index: number) => (
                       <p
                         key={index}
-                        className={`text-blue-100/90 leading-relaxed text-lg ${
+                        className={`text-[#fffff6]/90 leading-relaxed text-lg ${
                           paragraph.trim() === '' ? 'mb-6' : 'mb-4'
                         }`}
                       >
@@ -260,7 +260,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                     </div>
                     <h3 className="text-lg font-bold text-white">Let{"'"}s Connect</h3>
                   </div>
-                  <p className="text-blue-100/80 mb-4">
+                  <p className="text-[#fffff6]/80 mb-4">
                     Ready to discuss your global business needs? Get in touch to explore
                     opportunities.
                   </p>

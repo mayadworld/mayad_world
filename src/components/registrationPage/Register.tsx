@@ -169,7 +169,7 @@ export default function RegistrationForm() {
         >
           <LoaderCircle className="w-10 h-10 text-[#fecc02] animate-spin" />
           <h3 className="text-lg sm:text-xl font-semibold text-white">Loading Registration Form</h3>
-          <p className="text-blue-100 text-sm sm:text-base">
+          <p className="text-[#fffff6] text-sm sm:text-base">
             Please wait while we prepare your registration form.
           </p>
         </motion.div>
@@ -189,7 +189,7 @@ export default function RegistrationForm() {
             <CheckCircle className="w-8 h-8 text-[#800000]" />
           </div>
           <h3 className="text-2xl font-bold text-white mb-3">Registration Complete!</h3>
-          <p className="text-blue-100 mb-6">Thank you for registering!</p>
+          <p className="text-[#fffff6] mb-6">Thank you for registering!</p>
           <button
             onClick={() => setSuccess(false)}
             className="inline-flex items-center px-6 py-3 bg-[#fecc02] text-[#800000] font-medium rounded-lg hover:bg-[#fecc02] transition duration-150 shadow-md"
@@ -246,13 +246,13 @@ export default function RegistrationForm() {
               <div className="relative z-10 h-full flex flex-col justify-between">
                 <div className="mb-8">
                   <div className="inline-flex items-center bg-[#fffff6]/20 backdrop-blur-sm rounded-full px-3 py-1 border border-[#fecc02]/50 mb-4">
-                    <span className="flex items-center text-xs font-medium text-blue-100">
+                    <span className="flex items-center text-xs font-medium text-[#fffff6]">
                       <MapPin size={12} className="mr-2 text-[#fecc02]" />
                       International Events
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">{getEventTitle()}</h3>
-                  <p className="text-blue-100 text-sm">{getEventDescription()}</p>
+                  <p className="text-[#fffff6] text-sm">{getEventDescription()}</p>
                 </div>
 
                 <div className="space-y-6">
@@ -280,13 +280,13 @@ export default function RegistrationForm() {
                     <div className="w-8 h-8 rounded-full bg-[#fecc02] flex items-center justify-center shadow-lg shadow-[#fecc02]/20">
                       <CheckCircle size={16} className="text-[#800000]" />
                     </div>
-                    <p className="text-sm text-blue-100">Expert-led programs</p>
+                    <p className="text-sm text-[#fffff6]">Expert-led programs</p>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-8 h-8 rounded-full bg-[#fecc02] flex items-center justify-center shadow-lg shadow-[#fecc02]/20">
                       <CheckCircle size={16} className="text-[#800000]" />
                     </div>
-                    <p className="text-sm text-blue-100">Global network of participants</p>
+                    <p className="text-sm text-[#fffff6]">Global network of participants</p>
                   </div>
                 </div>
               </div>

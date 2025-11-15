@@ -27,7 +27,7 @@ export default function EventsHero() {
       {/* Content container */}
       <div className="relative z-10 container mx-auto px-4 pt-32 pb-20 flex flex-col items-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-[#fffff6]/50 backdrop-blur-sm text-blue-100 px-4 py-2 rounded-full border-2 border-[#fecc02] mb-6">
+        <div className="inline-flex items-center gap-2 bg-[#fffff6]/50 backdrop-blur-sm text-[#fffff6] px-4 py-2 rounded-full border-2 border-[#fecc02] mb-6">
           <Calendar size={16} className="text-[#fecc02]" />
           <span className="text-sm font-medium">Upcoming Global Events</span>
         </div>
@@ -42,7 +42,7 @@ export default function EventsHero() {
         </h1>
 
         {/* Description */}
-        <p className="text-lg text-blue-100/80 text-center max-w-3xl mb-12 leading-relaxed">
+        <p className="text-lg text-[#fffff6]/80 text-center max-w-3xl mb-12 leading-relaxed">
           Our events are more than just conferences-they{"'"}re gateways to global thinking,
           cultural exchange, and academic enrichment. Whether you{"'"}re stepping into your first
           committee session or representing your country on an international stage, there{"'"}s an

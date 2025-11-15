@@ -58,7 +58,7 @@ export default function GoalsSection({ block }: GoalsBlockProps) {
               <h3 className="text-xl font-medium text-white mb-2">
                 Ready to participate in our Model UN program?
               </h3>
-              <p className="text-blue-100">
+              <p className="text-[#fffff6]">
                 Join delegates from around the world in simulating international diplomacy.
               </p>
             </div>

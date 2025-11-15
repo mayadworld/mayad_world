@@ -63,7 +63,7 @@ export default function ContactHero() {
                   <span className="absolute -bottom-2 left-0 w-full h-3 bg-[#fecc02]/30 rounded-full -rotate-1"></span>
                 </span>
               </h1>
-              <p className="text-lg text-blue-100/90 max-w-lg">
+              <p className="text-lg text-[#fffff6]/90 max-w-lg">
                 Transforming ideas into reality through innovation and excellence. Reach out to us
                 for collaboration opportunities or inquiries.
               </p>
