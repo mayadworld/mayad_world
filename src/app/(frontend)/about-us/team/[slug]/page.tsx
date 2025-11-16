@@ -184,7 +184,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                       )}
 
                       {team_member.phone && (
-                        <a
+                        <Link
                           href={`tel:${team_member.phone}`}
                           className="flex items-center gap-3 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors group"
                         >
@@ -192,7 +192,7 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                             <Phone className="w-4 h-4 text-[#fecc02]" />
                           </div>
                           <span className="text-[#fffff6] text-sm">{team_member.phone}</span>
-                        </a>
+                        </Link>
                       )}
 
                       {/* Optional: LinkedIn or location */}
@@ -206,12 +206,12 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
 
                     {/* CTA Button */}
                     <div className="pt-4">
-                      <a
+                      <Link
                         href={`tel:${team_member.phone}`}
                         className="w-full bg-[#fecc02] text-blue-950 py-3 px-4 rounded-lg font-bold hover:bg-[#fecc02]/90 transition-colors text-center block"
                       >
                         Get In Touch
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -264,13 +264,13 @@ export default async function TeamDescription({ params }: { params: Promise<{ sl
                     Ready to discuss your global business needs? Get in touch to explore
                     opportunities.
                   </p>
-                  <a
+                  <Link
                     href={`mailto:${team_member.email}`}
                     className="inline-flex items-center gap-2 text-[#fecc02] font-medium hover:text-[#fecc02]/80 transition-colors"
                   >
                     Send Message
                     <ArrowLeft className="w-4 h-4 rotate-180" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
