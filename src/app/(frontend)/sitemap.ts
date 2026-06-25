@@ -25,43 +25,43 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: 'https://www.mayadworld.com',
+      url: 'https://www.mayadworld.co.ke',
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1.0,
     },
     {
-      url: 'https://www.mayadworld.com/about-us',
+      url: 'https://www.mayadworld.co.ke/about-us',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: 'https://www.mayadworld.com/events',
+      url: 'https://www.mayadworld.co.ke/events',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: 'https://www.mayadworld.com/programs',
+      url: 'https://www.mayadworld.co.ke/programs',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: 'https://www.mayadworld.com/contact-us',
+      url: 'https://www.mayadworld.co.ke/contact-us',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: 'https://www.mayadworld.com/register',
+      url: 'https://www.mayadworld.co.ke/register',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: 'https://www.mayadworld.com/gallery',
+      url: 'https://www.mayadworld.co.ke/gallery',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,

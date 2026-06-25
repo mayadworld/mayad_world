@@ -32,7 +32,7 @@
     "framer-motion": "^12.6.3",
     "graphql": "^16.8.1",
     "lucide-react": "^0.487.0",
-    "next": "15.2.3",
+    "next": "15.2.8",
     "nodemailer": "^6.10.0",
     "payload": "3.31.0",
     "postcss": "^8.5.3",

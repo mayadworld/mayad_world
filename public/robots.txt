@@ -15,7 +15,7 @@ Disallow: /api/
 Disallow: /__next/
 
 # Host
-Host: https://www.mayadworld.com
+Host: https://www.mayadworld.co.ke
 
 # Sitemaps
-Sitemap: https://www.mayadworld.com/sitemap.xml
+Sitemap: https://www.mayadworld.co.ke/sitemap.xml
